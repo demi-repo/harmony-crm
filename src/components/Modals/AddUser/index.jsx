@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Modal from "../basic/Basic";
-import Input from "../../input/Input";
-import Select from "../../select/Select";
-import Label from "../../labels/label/Label";
-import addUserImg from "../../../assets/icons/addUser.svg";
+import Modal from "../Basic";
+import Input from "../../Input";
+import Select from "../../Select";
+import Label from "../../Labels/Label";
+import addUserIcon from "../../../assets/icons/master/user-plus.svg";
 
 const AddUserModal = ({ visible, onCancel }) => {
   return (
     <Modal
       visible={visible}
       onCancel={onCancel}
-      icon={addUserImg}
+      icon={addUserIcon}
       title="פרטי מקבל שירות חדש"
       flag={true}
       content={

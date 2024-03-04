@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 
-import MiniCard from "../../../components/taskCards/miniCard/MiniCard";
-import TitleLabel from "../../../components/labels/titleLabel/TitleLabel";
-import AddTask from "../../../components/modals/addTask/AddTask";
+import MiniCard from "../../TaskCards/MiniCard";
+import TitleLabel from "../../Labels/TitleLabel";
+import AddTask from "../../Modals/AddTask";
 import TaskCardData from "../../../mockup/TaskCard.json";
 
-import listSVG from "../../../assets/icons/list.svg";
-import taskSVG from "../../../assets/icons/task.svg";
+import listIcon from "../../../assets/icons/list.svg";
+import taskIcon from "../../../assets/icons/master/clipboard-check.svg";
 import addSVG from "../../../assets/icons/add.svg";
 
-import avatarImg5 from "../../../assets/images/avatar5.png";
-import avatarImg6 from "../../../assets/images/avatar6.png";
+import avatarImg5 from "../../../assets/avatars/avatar5.png";
+import avatarImg6 from "../../../assets/avatars/avatar6.png";
 
 const TaskCardList = () => {
   const [isVisible, setVisible] = useState(false);
@@ -19,10 +19,10 @@ const TaskCardList = () => {
   return (
     <div className="card-list">
       <div className="card-list-title">
-        <TitleLabel icon={taskSVG} title="משימות" />
+        <TitleLabel icon={taskIcon} title="משימות" />
         <div className="card-list-title-buttons">
           <div style={{ padding: "10px" }}>
-            <InlineSVG src={listSVG} />
+            <InlineSVG src={listIcon} />
           </div>
           <div className="card-list-title-buttons-text">כל המשימות</div>
         </div>

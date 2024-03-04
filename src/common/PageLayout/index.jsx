@@ -16,54 +16,56 @@ const PageLayout = (props) => {
   const theme = useSelector((state) => state.app.theme);
   const direction = useSelector((state) => state.app.direction);
 
-  <div
-    className={
-      "layout-container theme-" +
-      theme +
-      (direction === "ltr" ? " direction-ltr" : "")
-    }
-    id="layout-container"
-    style={{ direction }}
-  >
-    <Layout>
-      <Sider
-        theme="light"
-        width={270}
-        breakpoint="lg"
-        collapsedWidth="0"
-        collapsible
-        collapsed={collapsed}
-        onCollapse={() => setCollapsed(!collapsed)}
-        style={{
-          zIndex: 10,
-        }}
-      >
-        <SideBar
-          setCollapsed={() => setCollapsed(!collapsed)}
-          collapsed={collapsed}
-        />
-      </Sider>
+  return (
+    <div
+      className={
+        "layout-container theme-" +
+        theme +
+        (direction === "ltr" ? " direction-ltr" : "")
+      }
+      id="layout-container"
+      style={{ direction }}
+    >
       <Layout>
-        <Header
+        <Sider
+          theme="light"
+          width={270}
+          breakpoint="lg"
+          collapsedWidth="0"
+          collapsible
           collapsed={collapsed}
-          setCollapsed={() => setCollapsed(!collapsed)}
-        />
-        <Content
+          onCollapse={() => setCollapsed(!collapsed)}
           style={{
-            height: "calc(90vh - 65px)",
-            overflow: "auto",
-            padding: "0px",
-            position: "relative",
-            backgroundColor: ColorConstants.LAYOUT_BACKGROUND_COLORS[theme],
+            zIndex: 10,
           }}
         >
-          {direction === "ltr" && <ChatGPT />}
-          {children}
-          {direction === "rtl" && <ChatGPT />}
-        </Content>
+          <SideBar
+            setCollapsed={() => setCollapsed(!collapsed)}
+            collapsed={collapsed}
+          />
+        </Sider>
+        <Layout>
+          <Header
+            collapsed={collapsed}
+            setCollapsed={() => setCollapsed(!collapsed)}
+          />
+          <Content
+            style={{
+              height: "calc(90vh - 65px)",
+              overflow: "auto",
+              padding: "0px",
+              position: "relative",
+              backgroundColor: ColorConstants.LAYOUT_BACKGROUND_COLORS[theme],
+            }}
+          >
+            {direction === "ltr" && <ChatGPT />}
+            {children}
+            {direction === "rtl" && <ChatGPT />}
+          </Content>
+        </Layout>
       </Layout>
-    </Layout>
-  </div>;
+    </div>
+  );
 };
 
 export default PageLayout;

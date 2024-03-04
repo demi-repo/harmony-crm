@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import InlineSVG from "react-inlinesvg";
-import downImg from "../../assets/icons/down.svg";
+import downIcon from "../../assets/icons/chevrons/down.svg";
 import { Button } from "antd";
 
 const Dropdown = ({ text }) => {
   return (
     <Button className="dropdown">
       <span>{text}</span>
-      <InlineSVG src={downImg} style={{ stroke: "#434f68" }} />
+      <InlineSVG src={downIcon} style={{ stroke: "#434f68" }} />
     </Button>
   );
 };

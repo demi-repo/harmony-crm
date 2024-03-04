@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../assets/icons/close.svg";
+import closeIcon from "../../../assets/icons/master/close.svg";
 import Button from "../../../components/button/Button";
 import Item from "../../../components/profiles/basic/item/Item";
-import addUserImg from "../../../assets/icons/addUser.svg";
+import addUserIcon from "../../../assets/icons/master/user-plus.svg";
 import createSVG from "../../../assets/icons/create2.svg";
 import { useSelector } from "react-redux";
 
@@ -73,7 +73,7 @@ const CreateModal = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div>
                 <div className="modal-title">
@@ -137,8 +137,8 @@ const CreateModal = ({ visible, onCancel }) => {
                   className="basic-modal-footer"
                   style={{ marginTop: "20px" }}
                 >
-                  <Button onClick={onCancel} icon={addUserImg} label="שמירה" />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={addUserIcon} label="שמירה" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

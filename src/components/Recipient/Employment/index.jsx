@@ -5,7 +5,7 @@ import Table from "../../../../components/table/Table";
 import editSVG from "../../../../assets/icons/pencil.svg";
 import trashSVG from "../../../../assets/icons/trash.svg";
 import { useState } from "react";
-import jobSVG from "../../../../assets/icons/job.svg";
+import jobSVG from "../../../../assets/icons/master/bag.svg";
 import Modal from "../../../../components/modals/basic/Basic";
 import Item from "../../../../components/profiles/basic/item/Item";
 

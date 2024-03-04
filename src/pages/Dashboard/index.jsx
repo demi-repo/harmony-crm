@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Dashboard1 from "./dashboard1/Dashboard1";
-import Dashboard2 from "./dashboard2/Dashboard2";
+import Dashboard1 from "../../components/Dashboard/Dashboard1";
+import Dashboard2 from "../../components/Dashboard/Dashboard2";
 
 const DashBoard = () => {
   const [click, setClick] = useState(true);

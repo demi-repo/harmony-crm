@@ -2,7 +2,7 @@ import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import closeImg from "../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../assets/icons/master/close.svg";
 import sendSVG from "../../../../../assets/icons/send.svg";
 import trashSVG from "../../../../../assets/icons/trash.svg";
 import editSVG from "../../../../../assets/icons/pencil.svg";
@@ -72,7 +72,7 @@ const Modal = ({ visible, onCancel }) => {
             >
               <div className="medical-modal-board">
                 <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                  <InlineSVG src={closeImg} />
+                  <InlineSVG src={closeIcon} />
                 </button>
                 <img src={articleImg} />
               </div>

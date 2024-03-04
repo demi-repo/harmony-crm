@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../../../assets/icons/master/close.svg";
 import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
 import recoverySVG from "../../../../../../../assets/icons/recovery.svg";
 import Table from "../../../../../../../components/table/Table";
@@ -95,7 +95,7 @@ const EventHistory = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div>
                 <ModalTitle icon={recoverySVG} title="היסטורית אירועים" />

@@ -1,9 +1,9 @@
 import React from "react";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import { Bar } from "react-chartjs-2";
+import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
 import "chart.js/auto";
-import ChartDataLabels from "chartjs-plugin-datalabels";
-import { useSelector } from "react-redux";
 
 import {
   Chart as ChartJS,

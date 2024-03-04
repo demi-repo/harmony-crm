@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../../../assets/icons/master/close.svg";
 import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
 import questionSVG from "../../../../../../../assets/icons/question.svg";
 import Button from "../../../../../../../components/button/Button";
@@ -68,7 +68,7 @@ const NewQuestionnaire = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div className="recipient-questionnaire-modal">
                 <ModalTitle icon={questionSVG} title="הוספת שאלון" />
@@ -131,7 +131,7 @@ const NewQuestionnaire = ({ visible, onCancel }) => {
                   style={{ marginTop: "20px" }}
                 >
                   <Button onClick={onCancel} label="שמירה" />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

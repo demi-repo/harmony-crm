@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../../assets/icons/close.svg";
+import closeIcon from "../../../../assets/icons/master/close.svg";
 import uploadSVG from "../../../../assets/icons/uploadDoc.svg";
 import Button from "../../../../components/button/Button";
 import Item from "../../../../components/profiles/basic/item/Item";
-import reportSVG from "../../../../assets/icons/report.svg";
+import reportSVG from "../../../../assets/icons/master/create.svg";
 import ModalTitle from "../../../../components/labels/modalTitle/ModalTitle";
 import ReactSelect from "react-select";
 import userSVG from "../../../../assets/icons/user.svg";
-import addUserSVG from "../../../../assets/icons/addUser.svg";
+import addUserSVG from "../../../../assets/icons/master/user-plus.svg";
 import { Segmented, Upload, ConfigProvider } from "antd";
 import { useSelector } from "react-redux";
 
@@ -76,7 +76,7 @@ const Expense = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div className="recipient-daily-planner-create">
                 <ModalTitle title="טופס דיווח נוכחות" icon={reportSVG} />
@@ -202,7 +202,7 @@ const Expense = ({ visible, onCancel }) => {
                   style={{ marginTop: "20px" }}
                 >
                   <Button onClick={onCancel} label="שמירה" icon={addUserSVG} />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

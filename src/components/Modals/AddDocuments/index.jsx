@@ -2,7 +2,7 @@ import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import closeImg from "../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../assets/icons/master/close.svg";
 import { Radio } from "antd";
 import sendSVG from "../../../../../assets/icons/send.svg";
 import Button from "../../../../../components/button/Button";
@@ -67,7 +67,7 @@ const Modal = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div className="document-modal-board">
                 <Radio.Group

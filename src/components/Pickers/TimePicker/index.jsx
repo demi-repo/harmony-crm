@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import dayjs from "dayjs";
 import InlineSVG from "react-inlinesvg";
 import { TimePicker as AntdTimePicker } from "antd";
 
-import downImg from "../../../assets/icons/down.svg";
+import downIcon from "../../../assets/icons/chevrons/down.svg";
 
 const TimePicker = ({ pl, pr, py }) => {
   return (
@@ -19,7 +19,7 @@ const TimePicker = ({ pl, pr, py }) => {
         className="picker-main"
         format={"HH:mm"}
         defaultValue={dayjs("12:08", "HH:MM")}
-        suffixIcon={<InlineSVG src={downImg} />}
+        suffixIcon={<InlineSVG src={downIcon} />}
         allowClear={false}
       />
     </div>

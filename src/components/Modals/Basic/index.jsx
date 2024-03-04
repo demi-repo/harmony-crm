@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-
-import ModalTitle from "../../labels/modalTitle/ModalTitle";
-import Button from "../../button/Button";
-import closeImg from "../../../assets/icons/close.svg";
-import addUserImg from "../../../assets/icons/addUser.svg";
-import checkImg from "../../../assets/icons/check.svg";
 import { useSelector } from "react-redux";
+
+import ModalTitle from "../../Labels/ModalTitle";
+import Button from "../../Button";
+import closeIcon from "../../../assets/icons/master/close.svg";
+import addUserIcon from "../../../assets/icons/master/user-plus.svg";
+import checkIcon from "../../../assets/icons/master/check.svg";
 
 ReactModal.setAppElement("#root");
 
@@ -79,7 +79,7 @@ const Modal = ({
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div>
                 <ModalTitle icon={icon} title={title} />
@@ -90,10 +90,10 @@ const Modal = ({
                 >
                   <Button
                     onClick={onCancel}
-                    icon={flag ? addUserImg : checkImg}
+                    icon={flag ? addUserIcon : checkIcon}
                     label="שמירה"
                   />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import Button from "../../../components/button/Button";
-import AddUserModal from "../../../components/modals/addUser/AddUser";
-import AttendModal from "../../../components/modals/attend/Attend";
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
+
+import Button from "../../Button";
+import AddUserModal from "../../Modals/AddUser";
+import AttendModal from "../../Modals/Attend";
+import AddTask from "../../Modals/AddTask";
 
 import originalPicture from "../../../assets/images/picture-original.png";
 import suggestedPicture from "../../../assets/images/picture-suggested.png";
 import mondayPicture from "../../../assets/images/picture-monday.png";
 import dynamicsPicture from "../../../assets/images/picture-dynamics.png";
-import addUserImg from "../../../assets/icons/addUser.svg";
-import taskImg from "../../../assets/icons/task.svg";
-import existReportImg from "../../../assets/icons/existReport.svg";
-import AddTask from "../../../components/modals/addTask/AddTask";
-import { useSelector } from "react-redux";
+
+import addUserIcon from "../../../assets/icons/master/user-plus.svg";
+import clipboardCheckIcon from "../../../assets/icons/master/clipboard-check.svg";
+import fileUserIcon from "../../../assets/icons/master/file-user.svg";
 
 const QuickInfo = ({ flag }) => {
   const [isAddVisible, setAddVisible] = useState(false);
@@ -38,19 +40,19 @@ const QuickInfo = ({ flag }) => {
         )}
         <div className="quick-info-buttons">
           <Button
-            icon={addUserImg}
+            icon={addUserIcon}
             label="הוספת מקבל שירות"
             paddingY={15}
             onClick={() => setAddVisible(true)}
           />
           <Button
-            icon={taskImg}
+            icon={clipboardCheckIcon}
             label="משימה חדשה"
             paddingY={15}
             onClick={() => setIsTaskVisible(true)}
           />
           <Button
-            icon={existReportImg}
+            icon={fileUserIcon}
             label="דיווח נוכחות"
             paddingY={15}
             onClick={() => setReportVisible(true)}

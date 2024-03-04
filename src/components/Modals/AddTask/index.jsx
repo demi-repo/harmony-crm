@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Modal from "../basic/Basic";
-import Select from "../../select/Select";
-import Input from "../../input/Input";
-import DatePicker from "../../pickers/datePicker/DatePicker";
-import ToggleSelector from "../../toggleSelector/ToggleSelector";
-import UploadFile from "../../uploads/uploadFile/UploadFile";
-import Label from "../../labels/label/Label";
+import Modal from "../Basic";
+import Select from "../../Select";
+import Input from "../../Input";
+import DatePicker from "../../Pickers/DatePicker";
+import ToggleSelector from "../../ToggleSelector";
+import UploadFile from "../../Uploads/UploadFile";
+import Label from "../../Labels/Label";
 
-import taskImg from "../../../assets/icons/task.svg";
-import userImg from "../../../assets/icons/user.svg";
+import clipboardCheckIcon from "../../../assets/icons/master/check.svg";
+import userIcon from "../../../assets/icons/master/user.svg";
 
 const AddTask = ({ visible, onCancel }) => {
   return (
@@ -19,14 +19,14 @@ const AddTask = ({ visible, onCancel }) => {
       py={25}
       visible={visible}
       onCancel={onCancel}
-      icon={taskImg}
+      icon={clipboardCheckIcon}
       title="משימה חדשה"
       content={
         <div className="add-task">
           <div className="add-task-info">
             <div className="w-half">
               <Label title="מקבל שירות" />
-              <Select placeholder="בחירת מקבל שירות" icon={userImg} />
+              <Select placeholder="בחירת מקבל שירות" icon={userIcon} />
             </div>
             <div>
               <Label title="שם משימה" required={true} />

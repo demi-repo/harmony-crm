@@ -1,5 +1,5 @@
 import Basic from "../basic/Basic";
-import jobSVG from "../../../assets/icons/job.svg";
+import jobSVG from "../../../assets/icons/master/bag.svg";
 import CheckBox from "../../checkBox/CheckBox";
 import Item from "../basic/item/Item";
 import { useState } from "react";

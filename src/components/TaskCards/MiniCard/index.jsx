@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
-import TimeLabel from "../../labels/timeLabel/TimeLabel";
+import TimeLabel from "../../Labels/TimeLabel";
 
 const MiniCard = ({ avatar, name, title, content, dueContent, color }) => {
   return (

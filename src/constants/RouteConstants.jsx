@@ -1,9 +1,11 @@
 import { lazy } from "react";
 
+const Dashboard = lazy(() => import("../pages/Dashboard"));
+
 const RouteConstants = [
   {
     path: "/",
-    element: <div />,
+    element: <Dashboard />,
   },
   {
     path: "*",

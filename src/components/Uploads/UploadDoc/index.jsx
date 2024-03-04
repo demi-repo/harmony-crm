@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import InlineSVG from "react-inlinesvg";
 import { Button, Upload } from "antd";
 
-import Label from "../../labels/label/Label";
-import UploadDocImg from "../../../assets/icons/uploadDoc.svg";
+import Label from "../../Labels/Label";
+import UploadDocImg from "../../../assets/icons/master/upload-file.svg";
 
 const UploadDoc = ({ title, label, visible }) => {
   const [isHover, setHover] = useState(false);

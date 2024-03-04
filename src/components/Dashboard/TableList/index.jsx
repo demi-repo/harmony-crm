@@ -1,19 +1,19 @@
 import React from "react";
 
-import Table from "../../../components/table/Table";
-import TitleLabel from "../../../components/labels/titleLabel/TitleLabel";
+import Table from "../../Table";
+import TitleLabel from "../../Labels/TitleLabel";
 import TableData from "../../../mockup/TableData.json";
 
-import attachImg from "../../../assets/icons/attach.svg";
-import usersImg from "../../../assets/icons/users.svg";
-import jobImg from "../../../assets/icons/job.svg";
+import attachmentIcon from "../../../assets/icons/master/attachment.svg";
+import usersIcon from "../../../assets/icons/master/users.svg";
+import bagIcon from "../../../assets/icons/master/bag.svg";
 
 const TableList = () => {
   return (
     <div className="table-list">
       <div className="table1">
         <div className="table-style">
-          <TitleLabel icon={usersImg} title="מגעים חסרים של מעל לשבוע" />
+          <TitleLabel icon={usersIcon} title="מגעים חסרים של מעל לשבוע" />
           <Table
             columns={TableData.Table1.columns}
             data={TableData.Table1.data}
@@ -22,7 +22,7 @@ const TableList = () => {
       </div>
       <div className="table1">
         <div className="table-style">
-          <TitleLabel icon={attachImg} title="אישורים לקראת סיום" />
+          <TitleLabel icon={attachmentIcon} title="אישורים לקראת סיום" />
           <Table
             columns={TableData.Table2.columns}
             data={TableData.Table2.data}
@@ -31,7 +31,7 @@ const TableList = () => {
       </div>
       <div className="table2">
         <div className="table-style">
-          <TitleLabel icon={jobImg} title="הזדמנויות תעסוקה חדשות" />
+          <TitleLabel icon={bagIcon} title="הזדמנויות תעסוקה חדשות" />
           <Table
             columns={TableData.Table3.columns}
             data={TableData.Table3.data}

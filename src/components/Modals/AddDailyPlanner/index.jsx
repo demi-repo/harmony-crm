@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../assets/icons/master/close.svg";
 import addEventSVG from "../../../../../assets/icons/addevent.svg";
 import avatarImg1 from "../../../../../assets/images/avatar1.png";
 import Button from "../../../../../components/button/Button";
@@ -75,7 +75,7 @@ const CreateModal = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div className="recipient-daily-planner-create">
                 <div style={{ display: "flex", gap: "10px" }}>
@@ -295,7 +295,7 @@ const CreateModal = ({ visible, onCancel }) => {
                   style={{ marginTop: "20px" }}
                 >
                   <Button onClick={onCancel} label="שמירה" />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

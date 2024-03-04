@@ -3,7 +3,7 @@ import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { Input } from "antd";
 import { motion, AnimatePresence } from "framer-motion";
-import closeImg from "../../../../../../../assets/icons/close.svg";
+import closeIcon from "../../../../../../../assets/icons/master/close.svg";
 import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
 import addEventSVG from "../../../../../../../assets/icons/addevent.svg";
 import geometricsSVG from "../../../../../../../assets/icons/geometrics.svg";
@@ -70,7 +70,7 @@ const NewEvent = ({ visible, onCancel }) => {
               }}
             >
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
-                <InlineSVG src={closeImg} />
+                <InlineSVG src={closeIcon} />
               </button>
               <div>
                 <ModalTitle icon={addEventSVG} title="אירוע חדש" />
@@ -159,7 +159,7 @@ const NewEvent = ({ visible, onCancel }) => {
                   style={{ marginTop: "20px" }}
                 >
                   <Button onClick={onCancel} label="שמירה" />
-                  <Button onClick={onCancel} icon={closeImg} label="ביטול" />
+                  <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>
             </div>

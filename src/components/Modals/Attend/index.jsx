@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import Modal from "../basic/Basic";
-import DatePicker from "../../pickers/datePicker/DatePicker";
-import TimePicker from "../../pickers/timePicker/TimePicker";
-import CheckBox from "../../checkBox/CheckBox";
-import ToggleSelector from "../../toggleSelector/ToggleSelector";
-import UploadDoc from "../../uploads/uploadDoc/UploadDoc";
-import Label from "../../labels/label/Label";
+import Modal from "../Basic";
+import DatePicker from "../../Pickers/DatePicker";
+import TimePicker from "../../Pickers/TimePicker";
+import CheckBox from "../../CheckBox";
+import ToggleSelector from "../../ToggleSelector";
+import UploadDoc from "../../Uploads/UploadDoc";
+import Label from "../../Labels/Label";
 
-import reportImg from "../../../assets/icons/report.svg";
+import createIcon from "../../../assets/icons/master/create.svg";
 
 const AttendModal = ({ visible, onCancel }) => {
   const [isVacation, setVacation] = useState(false);
@@ -19,7 +19,7 @@ const AttendModal = ({ visible, onCancel }) => {
     <Modal
       visible={visible}
       onCancel={onCancel}
-      icon={reportImg}
+      icon={createIcon}
       title="טופס דיווח נוכחות"
       flag={false}
       content={

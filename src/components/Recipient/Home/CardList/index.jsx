@@ -7,7 +7,7 @@ import AddTask from "../../../../../components/modals/addTask/AddTask";
 import TaskCardData from "../../../../../mockup/TaskCard.json";
 
 import listSVG from "../../../../../assets/icons/list.svg";
-import taskSVG from "../../../../../assets/icons/task.svg";
+import taskSVG from "../../../../../assets/icons/master/clipboard-master/check.svg";
 import addSVG from "../../../../../assets/icons/add.svg";
 
 import avatarImg5 from "../../../../../assets/images/avatar5.png";

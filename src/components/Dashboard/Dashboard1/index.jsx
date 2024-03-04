@@ -1,8 +1,8 @@
 import React from "react";
 
-import QuickInfo from "../quickInfo/QuickInfo";
-import CardList from "../cardList/CardList";
-import TableList from "../tableList/TableList";
+import QuickInfo from "../QuickInfo";
+import CardList from "../CardList";
+import TableList from "../TableList";
 
 const DashBoard1 = () => {
   return (

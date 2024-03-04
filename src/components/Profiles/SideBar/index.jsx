@@ -2,9 +2,9 @@ import React from "react";
 import InlineSVG from "react-inlinesvg";
 import userSVG from "../../../../../assets/icons/user.svg";
 import geometricsSVG from "../../../../../assets/icons/geometrics.svg";
-import usersSVG from "../../../../../assets/icons/users.svg";
+import usersSVG from "../../../../../assets/icons/master/users.svg";
 import studySVG from "../../../../../assets/icons/study.svg";
-import jobSVG from "../../../../../assets/icons/job.svg";
+import jobSVG from "../../../../../assets/icons/master/bag.svg";
 import planSVG from "../../../../../assets/icons/plan2.svg";
 import detailSVG from "../../../../../assets/icons/detail.svg";
 

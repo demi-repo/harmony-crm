@@ -5,7 +5,7 @@ import createSVG from "../../../../assets/icons/create2.svg";
 import Table from "../../../../components/table/Table";
 import editSVG from "../../../../assets/icons/pencil.svg";
 import trashSVG from "../../../../assets/icons/trash.svg";
-import checkSVG from "../../../../assets/icons/check.svg";
+import checkSVG from "../../../../assets/icons/master/check.svg";
 import Modal from "../../../../components/modals/basic/Basic";
 import studySVG from "../../../../assets/icons/study.svg";
 import Item from "../../../../components/profiles/basic/item/Item";

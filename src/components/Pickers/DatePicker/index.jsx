@@ -5,7 +5,7 @@ import InlineSVG from "react-inlinesvg";
 import { ConfigProvider } from "antd";
 import { useSelector } from "react-redux";
 
-import planImg from "../../../assets/icons/plan.svg";
+import planImg from "../../../assets/icons/master/calendar.svg";
 
 const DatePicker = ({ pl, pr, py }) => {
   const [isHover, setHover] = useState(false);

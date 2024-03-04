@@ -1,8 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
+
 import { RouteConstants } from "../constants";
 import Loader from "../common/Loader";
 import PageLayout from "../common/PageLayout";
+
 const RoutesDefined = () => {
   return (
     <Router>

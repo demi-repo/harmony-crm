@@ -1,6 +1,6 @@
 import Basic from "../basic/Basic";
 import { Button } from "antd";
-import usersSVG from "../../../assets/icons/users.svg";
+import usersSVG from "../../../assets/icons/master/users.svg";
 import addImg from "../../../assets/icons/add.svg";
 import Item from "../basic/item/Item";
 import InlineSVG from "react-inlinesvg";

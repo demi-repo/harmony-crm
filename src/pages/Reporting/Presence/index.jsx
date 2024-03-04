@@ -4,7 +4,7 @@ import reportSVG from "../../../assets/icons/create.svg";
 import planSVG from "../../../assets/icons/calendar.svg";
 import trashSVG from "../../../assets/icons/trash.svg";
 import editSVG from "../../../assets/icons/pencil.svg";
-import checkSVG from "../../../assets/icons/check.svg";
+import checkSVG from "../../../assets/icons/master/check.svg";
 import downloadSVG from "../../../assets/icons/download.svg";
 
 import Table from "../../../components/table/Table";
