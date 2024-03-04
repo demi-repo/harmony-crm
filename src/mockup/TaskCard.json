@@ -1,0 +1,36 @@
+{
+  "TaskCard1": [
+    {
+      "avatar": "../../assets/images/avatar5.png",
+      "name": "ישראל ישראלי",
+      "title": "קורות חיים",
+      "content": "שיפור קורות חיים שיפור קורות חייםשיפור קורות",
+      "dueContent": "24 במאי",
+      "color": "Graph-03"
+    },
+    {
+      "avatar": "../../assets/images/avatar5.png",
+      "name": "ישראל ישראלי",
+      "title": "חסר שירות צבאי",
+      "content": "שיפור קורות חיים שיפור קורות חייםשיפור קורות",
+      "dueContent": "24 במאי",
+      "color": "Graph-04"
+    },
+    {
+      "avatar": "../../assets/images/avatar6.png",
+      "name": "ישראל ישראלי",
+      "title": "סודיות רפואית",
+      "content": "שיפור קורות חיים שיפור קורות חייםשיפור קורות",
+      "dueContent": "24 במאי",
+      "color": "Graph-01"
+    },
+    {
+      "avatar": "../../assets/images/avatar5.png",
+      "name": "ישראל ישראלי",
+      "title": "קורות חיים",
+      "content": "שיפור קורות חיים שיפור קורות חייםשיפור קורות",
+      "dueContent": "24 במאי",
+      "color": "Graph-03"
+    }
+  ]
+}

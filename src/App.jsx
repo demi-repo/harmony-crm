@@ -14,6 +14,7 @@ const App = () => {
       .getElementById("dynamic-favicon")
       .setAttribute("href", `icons/${icons[hours % 4]}.svg`);
   });
+
   return (
     <Helmet>
       <link
