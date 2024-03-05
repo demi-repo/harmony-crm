@@ -290,7 +290,7 @@ const Header = ({ collapsed, setCollapsed }) => {
                 <InlineSVG
                   src={userIcon}
                   style={{
-                    stroke: isHover && "#0075FF",
+                    stroke: isHover ? "#0075FF" : "#000000d0",
                   }}
                 />
                 {viewportWidth > 1100 && "חיפוש מקבל שירות..."}
@@ -301,7 +301,7 @@ const Header = ({ collapsed, setCollapsed }) => {
               <div className="header-select-modal">
                 <Input
                   className="modal-button"
-                  suffix={<InlineSVG src={searchIcon} />}
+                  suffix={<InlineSVG src={searchIcon} stroke="rgba(0, 0, 0, 0.88)"/>}
                   placeholder="שא"
                 />
                 <div className="modal-table">

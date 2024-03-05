@@ -5,7 +5,7 @@ import InlineSVG from "react-inlinesvg";
 import leftIcon from "../../assets/icons/chevrons/left.svg";
 import rightIcon from "../../assets/icons/chevrons/right.svg";
 
-import subMenuImg from "../../assets/icons/master/hexagon.svg";
+import hexagonIcon from "../../assets/icons/master/hexagon.svg";
 import { useSelector } from "react-redux";
 
 const colors = {
@@ -78,7 +78,9 @@ const MenuItem = ({
       >
         <div className="menu-item-container">
           <InlineSVG
-            src={isSubMenu ? subMenuImg : icon}
+            width={isSubMenu ? 8 : 24}
+            height={isSubMenu ? 8 : 24}
+            src={isSubMenu ? hexagonIcon : icon}
             style={
               isSubMenu
                 ? isSelect

@@ -9,7 +9,7 @@ import ToggleSelector from "../../ToggleSelector";
 import UploadFile from "../../Uploads/UploadFile";
 import Label from "../../Labels/Label";
 
-import clipboardCheckIcon from "../../../assets/icons/master/check.svg";
+import clipboardCheckIcon from "../../../assets/icons/master/clipboard-check.svg";
 import userIcon from "../../../assets/icons/master/user.svg";
 
 const AddTask = ({ visible, onCancel }) => {

@@ -22,7 +22,7 @@ const UploadDoc = ({ title, label, visible }) => {
               icon={
                 <InlineSVG
                   src={UploadDocImg}
-                  className={`${isHover && "stroke-[#0075FF]"}`}
+                  style={isHover ? {stroke: "#0075FF"} : {}}
                 />
               }
             >

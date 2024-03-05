@@ -77,7 +77,7 @@ const NewEvent = ({ visible, onCancel }) => {
                 <ModalTitle icon={calendarPlusIcon} title="אירוע חדש" />
                 <div className=
                 "recipient-home-new-event">
-              <div>
+
                   <div className="profiles-item">
                     <div className="profiles-item-name">
                       <span>תאריך</span>
@@ -164,7 +164,6 @@ const NewEvent = ({ visible, onCancel }) => {
                   <Button onClick={onCancel} label="שמירה" />
                   <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
-              </div>
             </div>
           </motion.div>
         )}

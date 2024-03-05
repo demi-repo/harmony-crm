@@ -20,7 +20,10 @@ const SmallCard = ({ title, content, labelColor }) => {
       <div className="small-card-footer">
         <div className="small-card-footer-attach">
           <span>3</span>
-          <InlineSVG src={paperclipIcon} style={{ stroke: "#5177A4" }} />
+          <InlineSVG
+            src={paperclipIcon}
+            style={{ stroke: "#5177A4", width: 16, height: 16 }}
+          />
         </div>
         <div className="small-card-footer-info">
           <span className="card-number-text">כרטיס:</span>

@@ -5,7 +5,7 @@ import InlineSVG from "react-inlinesvg";
 import AddTask from "../../components/Modals/AddTask";
 import MediumCard from "../../components/TaskCards/MediumCard";
 
-import createIcon from "../../assets/icons/master/create.svg";
+import createIcon from "../../assets/icons/master/clipboard-report.svg";
 import avatarImg1 from "../../assets/avatars/avatar1.png";
 import avatarImg2 from "../../assets/avatars/avatar2.png";
 import avatarImg3 from "../../assets/avatars/avatar3.png";

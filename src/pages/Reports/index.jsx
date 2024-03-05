@@ -2,7 +2,7 @@ import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
 import InlineSVG from "react-inlinesvg";
 import { useSelector } from "react-redux";
 
-import pdfIcon from "../../assets/icons/document/pdf.svg";
+import pdfIcon from "../../assets/icons/document/pdf2.svg";
 import excelIcon from "../../assets/icons/document/excel.svg";
 
 import Select from "../../components/Select";

@@ -68,7 +68,7 @@ const SideBar = ({ current, setCurrent }) => {
             src={item.icon}
             width={24}
             height={24}
-            style={{ stroke: index === current ? "white" : "#434F68" }}
+            style={{ stroke: index === current ? "white" : "#000000D0" }}
           />
           <span>{item.text}</span>
         </div>

@@ -16,7 +16,7 @@ import ClipboardCheckIcon from "../../../assets/icons/master/clipboard-check.svg
 import CalendarIcon from "../../../assets/icons/master/calendar.svg";
 import CreateIcon from "../../../assets/icons/master/create.svg";
 import bagIcon from "../../../assets/icons/master/bag.svg";
-import CRMIcon from "../../../assets/icons/master/CRM.svg";
+import targetIcon from "../../../assets/icons/master/target.svg";
 import presentationIcon from "../../../assets/icons/master/presentation.svg";
 import warningIcon from "../../../assets/icons/master/warning.svg";
 import addIcon from "../../../assets/icons/add.svg";
@@ -252,7 +252,7 @@ const SideBar = ({ collapsed, setCollapsed }) => {
         <MenuItem
           hasSubMenu={true}
           subMenuSelected={Math.floor(isSelected / 10) === 7}
-          icon={CRMIcon}
+          icon={targetIcon}
           title="CRM"
           onClick={() => setShowSubMenu(showSubMenu === 7 ? -1 : 7)}
           isSelect={showSubMenu === 7}

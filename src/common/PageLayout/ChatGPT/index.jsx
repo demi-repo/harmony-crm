@@ -41,22 +41,6 @@ const ChatGPT = () => {
         }}
       >
         <div className="chat-gpt">
-          {direction === "ltr" && (
-            <div className="chat-gpt-button-area">
-              <button onClick={() => setClick(!isClick)}>
-                <InlineSVG
-                  width={20}
-                  height={20}
-                  src={isClick ? CloseIcon : DownIcon}
-                  style={{ stroke: "white" }}
-                />
-              </button>
-              <div className="chat-gpt-button-area-svg">
-                <InlineSVG src={GPTIcon} />
-              </div>
-              <div className="chat-gpt-button-area-text">ChatGPT</div>
-            </div>
-          )}
           <div className="chat-gpt-board">
             <div className="chat-gpt-board-title">
               ChatGPT
@@ -159,7 +143,7 @@ const ChatGPT = () => {
               </div>
             </div>
           </div>
-          {direction === "rtl" && (
+          {direction === "rtl" ? (
             <div className="chat-gpt-button-area">
               <button onClick={() => setClick(!isClick)}>
                 <InlineSVG
@@ -173,6 +157,21 @@ const ChatGPT = () => {
                 <InlineSVG src={GPTIcon} />
               </div>
               <div className="chat-gpt-button-area-text">ChatGPT</div>
+            </div>
+          ) : (
+            <div className="chat-gpt-button-area">
+              <div className="chat-gpt-button-area-text">ChatGPT</div>              
+              <div className="chat-gpt-button-area-svg">
+                <InlineSVG src={GPTIcon} />
+              </div>
+              <button onClick={() => setClick(!isClick)}>
+                <InlineSVG
+                  width={20}
+                  height={20}
+                  src={isClick ? CloseIcon : DownIcon}
+                  style={{ stroke: "white" }}
+                />
+              </button>
             </div>
           )}
         </div>

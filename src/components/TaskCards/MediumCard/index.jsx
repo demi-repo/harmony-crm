@@ -24,7 +24,10 @@ const MediumCard = ({ title, content, name, avatar, labelColor }) => {
       <div className="medium-card-footer">
         <div className="medium-card-footer-attach">
           <span>3</span>
-          <InlineSVG src={paperclipIcon} style={{ stroke: "#5177A4" }} />
+          <InlineSVG
+            src={paperclipIcon}
+            style={{ stroke: "#5177A4", width: 16, height: 16 }}
+          />
         </div>
         <div className="medium-card-footer-info">
           <span className="card-number-text">כרטיס:</span>
