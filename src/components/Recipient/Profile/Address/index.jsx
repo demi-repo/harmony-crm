@@ -1,7 +1,9 @@
-import Basic from "../basic/Basic";
-import geometricsSVG from "../../../assets/icons/geometrics.svg";
-import Item from "../basic/item/Item";
 import { useState } from "react";
+
+import locationIcon from "../../../../assets/icons/master/location.svg";
+
+import Basic from "../Basic";
+import Item from "../Basic/Item";
 
 const Address = ({ selected }) => {
   const options = [
@@ -14,7 +16,7 @@ const Address = ({ selected }) => {
   return (
     <Basic
       title="כתובת ופרטי התקשרות"
-      icon={geometricsSVG}
+      icon={locationIcon}
       selected={selected}
       content={
         <>

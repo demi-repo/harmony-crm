@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { Button } from "antd";
 import InlineSVG from "react-inlinesvg";
-import downloadSVG from "../../../../assets/icons/download.svg";
-import Table from "../../../../components/table/Table";
-import sendSVG from "../../../../assets/icons/send.svg";
-import ColorLabel from "../../../../components/labels/colorLabel/ColorLabel";
 
-import Modal from "./modal/Modal";
-import { useState } from "react";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import sendIcon from "../../../assets/icons/master/send.svg";
+
+import Table from "../../../components/Table";
+import ColorLabel from "../../../components/Labels/ColorLabel";
+import Modal from "../../../components/Modals/AddQuestionnaire";
+
 const data = [
   {
     key: 1,
@@ -133,7 +135,7 @@ const columns = [
           alignItems: "center",
         }}
       >
-        <InlineSVG src={downloadSVG} width={20} />
+        <InlineSVG src={downloadIcon} width={20} />
       </div>
     ),
   },
@@ -146,7 +148,7 @@ const Employment = () => {
       <div className="recipient-questionnaires-navbar">
         <span className="recipient-questionnaires-navbar-title"></span>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={sendSVG} width={20} stroke="#434f68" />
+          <InlineSVG src={sendIcon} width={20} stroke="#434f68" />
           <span>שליחת שאלון</span>
         </Button>
       </div>

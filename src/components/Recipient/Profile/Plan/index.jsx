@@ -1,7 +1,9 @@
-import Basic from "../basic/Basic";
-import planSVG from "../../../assets/icons/plan2.svg";
-import Item from "../basic/item/Item";
 import { useState } from "react";
+
+import routeIcon from "../../../../assets/icons/master/route.svg";
+
+import Basic from "../Basic";
+import Item from "../Basic/Item";
 
 const Plan = ({ selected }) => {
   const options = [
@@ -29,7 +31,7 @@ const Plan = ({ selected }) => {
   return (
     <Basic
       title="תוכניות"
-      icon={planSVG}
+      icon={routeIcon}
       selected={selected}
       content={
         <>

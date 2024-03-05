@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { Input } from "antd";
-import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../../../../../assets/icons/master/close.svg";
-import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
-import addEventSVG from "../../../../../../../assets/icons/addevent.svg";
-import geometricsSVG from "../../../../../../../assets/icons/geometrics.svg";
-import Button from "../../../../../../../components/button/Button";
-import DatePicker from "../../../../../../../components/pickers/datePicker/DatePicker";
-import CheckBox from "../../../../../../../components/checkBox/CheckBox";
 import { useSelector } from "react-redux";
+import { motion, AnimatePresence } from "framer-motion";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import calendarPlusIcon from "../../../assets/icons/master/calendar-plus.svg";
+import locationIcon from "../../../assets/icons/master/location.svg";
+
+import ModalTitle from "../../Labels/ModalTitle";
+import Button from "../../Button";
+import DatePicker from "../../Pickers/DatePicker";
+import CheckBox from "../../CheckBox";
 
 ReactModal.setAppElement("#root");
 const { TextArea } = Input;
@@ -72,9 +74,10 @@ const NewEvent = ({ visible, onCancel }) => {
               <button className="basic-modal-cancel-btn" onClick={onCancel}>
                 <InlineSVG src={closeIcon} />
               </button>
+                <ModalTitle icon={calendarPlusIcon} title="אירוע חדש" />
+                <div className=
+                "recipient-home-new-event">
               <div>
-                <ModalTitle icon={addEventSVG} title="אירוע חדש" />
-                <div className="recipient-home-new-event">
                   <div className="profiles-item">
                     <div className="profiles-item-name">
                       <span>תאריך</span>
@@ -133,7 +136,7 @@ const NewEvent = ({ visible, onCancel }) => {
                                 placeholder="חפש או הקלד"
                                 prefix={
                                   <InlineSVG
-                                    src={geometricsSVG}
+                                    src={locationIcon}
                                     stroke="#999"
                                   />
                                 }

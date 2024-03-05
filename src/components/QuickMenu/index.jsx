@@ -1,14 +1,15 @@
-import bellSvg from "../../assets/icons/bell.svg";
-import editSvg from "../../assets/icons/pencil.svg";
-import deleteSvg from "../../assets/icons/trash.svg";
-import paperPinSvg from "../../assets/icons/paperpin.svg";
 import InlineSVG from "react-inlinesvg";
 
+import bellIcon from "../../assets/icons/master/bell.svg";
+import editIcon from "../../assets/icons/master/edit.svg";
+import trashIcon from "../../assets/icons/master/trash.svg";
+import paperclipIcon from "../../assets/icons/master/paperclip.svg";
+
 const datas = [
-  { text: "עריכה", icon: editSvg },
-  { text: "מחיקה", icon: deleteSvg },
-  { text: "הוספת תזכורת", icon: bellSvg },
-  { text: "הוספת קבצים", icon: paperPinSvg },
+  { text: "עריכה", icon: editIcon },
+  { text: "מחיקה", icon: trashIcon },
+  { text: "הוספת תזכורת", icon: bellIcon },
+  { text: "הוספת קבצים", icon: paperclipIcon },
 ];
 const QuickMenu = ({ visible, hide }) => {
   return (

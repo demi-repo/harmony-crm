@@ -1,10 +1,12 @@
-import Basic from "../basic/Basic";
-import studySVG from "../../../assets/icons/study.svg";
-import Item from "../basic/item/Item";
+import { useState } from "react";
 import { Button } from "antd";
 import InlineSVG from "react-inlinesvg";
-import addImg from "../../../assets/icons/add.svg";
-import { useState } from "react";
+
+import educationIcon from "../../../../assets/icons/master/education.svg";
+import addIcon from "../../../../assets/icons/add.svg";
+
+import Basic from "../Basic";
+import Item from "../Basic/Item";
 
 const Education = ({ selected }) => {
   const options = [
@@ -20,7 +22,7 @@ const Education = ({ selected }) => {
   return (
     <Basic
       title="השכלה"
-      icon={studySVG}
+      icon={educationIcon}
       selected={selected}
       content={
         <>
@@ -57,7 +59,7 @@ const Education = ({ selected }) => {
                 backgroundColor: "white",
               }}
             >
-              <InlineSVG src={addImg} />
+              <InlineSVG src={addIcon} />
             </Button>
             <div>הוסף איש קשר</div>
           </div>

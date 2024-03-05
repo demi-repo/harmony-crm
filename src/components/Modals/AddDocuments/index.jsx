@@ -1,14 +1,17 @@
 import ReactModal from "react-modal";
+import { useSelector } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
+import { Radio } from "antd";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import closeIcon from "../../../../../assets/icons/master/close.svg";
-import { Radio } from "antd";
-import sendSVG from "../../../../../assets/icons/send.svg";
-import Button from "../../../../../components/button/Button";
-import { useSelector } from "react-redux";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import sendIcon from "../../../assets/icons/master/send.svg";
+
+import Button from "../../Button";
 
 ReactModal.setAppElement("#root");
+
 const modalVariants = {
   hidden: {
     opacity: 0,
@@ -94,11 +97,13 @@ const Modal = ({ visible, onCancel }) => {
               <div className="document-modal-footer">
                 <Button
                   label="שליחת טופס"
-                  icon={sendSVG}
+                  icon={sendIcon}
+                  
                   onClick={() => onCancel()}
                 />
               </div>
             </div>
+
           </motion.div>
         )}
       </AnimatePresence>

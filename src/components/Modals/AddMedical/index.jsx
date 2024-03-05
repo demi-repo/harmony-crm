@@ -2,17 +2,18 @@ import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import closeIcon from "../../../../../assets/icons/master/close.svg";
-import sendSVG from "../../../../../assets/icons/send.svg";
-import trashSVG from "../../../../../assets/icons/trash.svg";
-import editSVG from "../../../../../assets/icons/pencil.svg";
-import nextSVG from "../../../../../assets/icons/signin.svg";
-import downloadSVG from "../../../../../assets/icons/download.svg";
-import Button from "../../../../../components/button/Button";
-import articleImg from "../../../../../assets/images/article.png";
 import { useSelector } from "react-redux";
 
+import closeIcon from "../../../assets/icons/master/close.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import editIcon from "../../../assets/icons/master/edit.svg";
+import signInIcon from "../../../assets/icons/master/sign-in.svg";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import Button from "../../Button";
+import articleImg from "../../../assets/images/article.png";
+
 ReactModal.setAppElement("#root");
+
 const modalVariants = {
   hidden: {
     opacity: 0,
@@ -80,24 +81,24 @@ const Modal = ({ visible, onCancel }) => {
                 <div>
                   <Button
                     label="הורדה"
-                    icon={downloadSVG}
+                    icon={downloadIcon}
                     onClick={() => onCancel()}
                   />
                   <Button
                     label="ייצוא"
-                    icon={nextSVG}
+                    icon={signInIcon}
                     onClick={() => onCancel()}
                   />
                 </div>
                 <div>
                   <Button
                     label="עריכה"
-                    icon={editSVG}
+                    icon={editIcon}
                     onClick={() => onCancel()}
                   />
                   <Button
                     label="מחיקה"
-                    icon={trashSVG}
+                    icon={trashIcon}
                     onClick={() => onCancel()}
                   />
                 </div>

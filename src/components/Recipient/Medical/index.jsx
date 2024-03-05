@@ -1,12 +1,14 @@
+import { useState } from "react";
 import { Button, Upload } from "antd";
 import InlineSVG from "react-inlinesvg";
-import uploadSVG from "../../../../assets/icons/uploadDoc.svg";
-import Table from "../../../../components/table/Table";
-import eyeSVG from "../../../../assets/icons/eye.svg";
-import downloadSVG from "../../../../assets/icons/download.svg";
-import trashSVG from "../../../../assets/icons/trash.svg";
-import { useState } from "react";
-import Modal from "./modal/Modal";
+
+import uploadFileIcon from "../../../assets/icons/master/upload-file.svg";
+import viewIcon from "../../../assets/icons/master/view.svg";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+
+import Modal from "../../Modals/AddMedical";
+import Table from "../../../components/Table";
 
 const Medical = () => {
   const [showModal, setShowModal] = useState(false);
@@ -65,10 +67,10 @@ const Medical = () => {
             className="recipient-medical-table-see"
             onClick={() => setShowModal(true)}
           >
-            <InlineSVG src={eyeSVG} width={20} />
+            <InlineSVG src={viewIcon} width={20} />
           </span>
-          <InlineSVG src={downloadSVG} width={20} />
-          <InlineSVG src={trashSVG} width={20} />
+          <InlineSVG src={downloadIcon} width={20} />
+          <InlineSVG src={trashIcon} width={20} />
         </div>
       ),
     },
@@ -80,7 +82,7 @@ const Medical = () => {
         <span className="recipient-medical-navbar-title"></span>
         <Upload>
           <Button>
-            <InlineSVG src={uploadSVG} width={20} />
+            <InlineSVG src={uploadFileIcon} width={20} />
             <span>העלאת מסמך</span>
           </Button>
         </Upload>

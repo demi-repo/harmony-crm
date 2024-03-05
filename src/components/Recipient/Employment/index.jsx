@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { Button, Input } from "antd";
 import InlineSVG from "react-inlinesvg";
-import createSVG from "../../../../assets/icons/create2.svg";
-import Table from "../../../../components/table/Table";
-import editSVG from "../../../../assets/icons/pencil.svg";
-import trashSVG from "../../../../assets/icons/trash.svg";
-import { useState } from "react";
-import jobSVG from "../../../../assets/icons/master/bag.svg";
-import Modal from "../../../../components/modals/basic/Basic";
-import Item from "../../../../components/profiles/basic/item/Item";
+
+import filePlusIcon from "../../../assets/icons/master/file-plus.svg";
+import editIcon from "../../../assets/icons/master/edit.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import bagIcon from "../../../assets/icons/master/bag.svg";
+
+import Table from "../../Table";
+import Modal from "../../Modals/Basic";
+import Item from "../../Recipient/Profile/Basic/Item";
 
 const data = [
   {
@@ -129,8 +131,8 @@ const columns = [
           alignItems: "center",
         }}
       >
-        <InlineSVG src={editSVG} width={20} />
-        <InlineSVG src={trashSVG} width={20} />
+        <InlineSVG src={editIcon} width={20} />
+        <InlineSVG src={trashIcon} width={20} />
       </div>
     ),
   },
@@ -143,7 +145,7 @@ const Employment = () => {
       <div className="recipient-employment-navbar">
         <span className="recipient-employment-navbar-title"></span>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={createSVG} width={20} />
+          <InlineSVG src={filePlusIcon} width={20} />
           <span>הוספת רשומה</span>
         </Button>
       </div>
@@ -153,7 +155,7 @@ const Employment = () => {
       <Modal
         visible={showModal}
         onCancel={() => setShowModal(false)}
-        icon={jobSVG}
+        icon={bagIcon}
         title="רשומת לימודים חדשה"
         flag={false}
         content={

@@ -1,15 +1,16 @@
 import { Button } from "antd";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import AddTask from "./addTask/AddTask";
-import SmallCard from "../../../../components/taskCards/smallCard/SmallCard";
-
-import createSvg from "../../../../assets/icons/create.svg";
-import avatarImg1 from "../../../../assets/images/avatar1.png";
-import avatarImg2 from "../../../../assets/images/avatar2.png";
-import avatarImg3 from "../../../../assets/images/avatar3.png";
-import addImg from "../../../../assets/icons/add.svg";
 import { useSelector } from "react-redux";
+
+import SmallCard from "../../../components/TaskCards/SmallCard";
+import AddTask from "../../../components/Modals/AddTask";
+
+import createIcon from "../../../assets/icons/master/create.svg";
+import avatarImg1 from "../../../assets/avatars/avatar1.png";
+import avatarImg2 from "../../../assets/avatars/avatar2.png";
+import avatarImg3 from "../../../assets/avatars/avatar3.png";
+import addIcon from "../../../assets/icons/add.svg";
 
 const items = [
   {
@@ -94,7 +95,7 @@ const Tasks = () => {
               }
             >
               <button onClick={() => setVisible(true)}>
-                <InlineSVG src={addImg} width={24} height={24} />
+                <InlineSVG src={addIcon} width={24} height={24} />
               </button>
               <div>משימה חדשה</div>
             </div>
@@ -108,7 +109,7 @@ const Tasks = () => {
             onClick={() => setVisible(true)}
           >
             <InlineSVG
-              src={createSvg}
+              src={createIcon}
               style={{ stroke: "#434F68", width: "16px", height: "20px" }}
             />
             <span>הוסף רשימה</span>

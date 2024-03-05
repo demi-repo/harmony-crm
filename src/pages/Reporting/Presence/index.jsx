@@ -1,16 +1,17 @@
 import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
 import InlineSVG from "react-inlinesvg";
-import reportSVG from "../../../assets/icons/create.svg";
-import planSVG from "../../../assets/icons/calendar.svg";
-import trashSVG from "../../../assets/icons/trash.svg";
-import editSVG from "../../../assets/icons/pencil.svg";
-import checkSVG from "../../../assets/icons/master/check.svg";
-import downloadSVG from "../../../assets/icons/download.svg";
-
-import Table from "../../../components/table/Table";
-import AttendModal from "../../../components/modals/attend/Attend";
-import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+
+import createIcon from "../../../assets/icons/master/create.svg";
+import calendarIcon from "../../../assets/icons/master/calendar.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import editIcon from "../../../assets/icons/master/edit.svg";
+import checkIcon from "../../../assets/icons/master/check.svg";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import Table from "../../../components/Table";
+import AttendModal from "../../../components/Modals/Attend";
+
 const { RangePicker } = DatePicker;
 
 const columns = [
@@ -49,7 +50,7 @@ const columns = [
     render: () => (
       <InlineSVG
         style={{ stroke: "#A5DD00", margin: "auto", width: "100%" }}
-        src={checkSVG}
+        src={checkIcon}
       />
     ),
   },
@@ -58,7 +59,7 @@ const columns = [
     key: "approval",
     dataIndex: "approval",
     sorter: true,
-    render: () => <InlineSVG src={downloadSVG} />,
+    render: () => <InlineSVG src={downloadIcon} />,
   },
   {
     title: "פעולות",
@@ -74,8 +75,8 @@ const columns = [
           justifyContent: "space-around",
         }}
       >
-        <InlineSVG src={editSVG} />
-        <InlineSVG src={trashSVG} />
+        <InlineSVG src={editIcon} />
+        <InlineSVG src={trashIcon} />
       </div>
     ),
   },
@@ -133,14 +134,14 @@ const Presence = () => {
                   setOpen(!open);
                 }}
               >
-                <InlineSVG src={planSVG} width={20} />
+                <InlineSVG src={calendarIcon} width={20} />
                 <span>טווח תאריכים</span>
               </Button>
             )}
             {open && <RangePicker style={{ height: "44px" }} />}
           </div>
           <Button onClick={() => setShowModal(true)}>
-            <InlineSVG src={reportSVG} width={20} />
+            <InlineSVG src={createIcon} width={20} />
             <span>דיווח חדש</span>
           </Button>
         </div>

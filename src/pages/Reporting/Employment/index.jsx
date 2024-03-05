@@ -1,12 +1,13 @@
-import { Button, ConfigProvider, Input } from "antd";
-import InlineSVG from "react-inlinesvg";
-import downloadSVG from "../../../assets/icons/downloadFile.svg";
-import sendSVG from "../../../assets/icons/send.svg";
-import trashSVG from "../../../assets/icons/trash.svg";
-import editSVG from "../../../assets/icons/pencil.svg";
-import avatarImg1 from "../../../assets/images/avatar1.png";
+import { Button, Input } from "antd";
 import { useState } from "react";
-import Table from "../../../components/table/Table";
+import InlineSVG from "react-inlinesvg";
+
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import sendIcon from "../../../assets/icons/master/send.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import editIcon from "../../../assets/icons/master/edit.svg";
+import avatarImg1 from "../../../assets/avatars/avatar1.png";
+import Table from "../../../components/Table";
 
 const data = [
   {
@@ -103,9 +104,9 @@ const Employment = () => {
             onClick={() => setIsEdit(record.key)}
             className="recipient-medical-table-see"
           >
-            <InlineSVG src={editSVG} />
+            <InlineSVG src={editIcon} />
           </span>
-          <InlineSVG src={trashSVG} />
+          <InlineSVG src={trashIcon} />
         </div>
       ),
     },
@@ -117,11 +118,11 @@ const Employment = () => {
         <Table data={data} columns={columns} />
         <div className="employment-table-buttons">
           <Button>
-            <InlineSVG src={downloadSVG} width={20} />
+            <InlineSVG src={downloadIcon} width={20} />
             <span>שליחה</span>
           </Button>
           <Button>
-            <InlineSVG src={sendSVG} width={20} style={{ stroke: "#434F68" }} />
+            <InlineSVG src={sendIcon} width={20} style={{ stroke: "#434F68" }} />
             <span>שמירה</span>
           </Button>
         </div>

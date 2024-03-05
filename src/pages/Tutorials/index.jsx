@@ -1,8 +1,8 @@
-import { Button, Upload } from "antd";
-import uploadSVG from "../../assets/icons/uploadFile.svg";
-import searchSVG from "../../assets/icons/search.svg";
-import VideoFrame from "../../components/videoFrame/VidoeFrame";
 import InlineSVG from "react-inlinesvg";
+import { Button, Upload } from "antd";
+import uploadIcon from "../../assets/icons/master/upload.svg";
+import searchIcon from "../../assets/icons/system/search.svg";
+import VideoFrame from "../../components/VideoFrame";
 
 const Tutorials = () => {
   return (
@@ -10,11 +10,11 @@ const Tutorials = () => {
       <div className="tutorials-navbar">
         <Button style={{ width: "300px", justifyContent: "space-between" }}>
           <span>תהליך שיקומי</span>
-          <InlineSVG src={searchSVG} width={20} />
+          <InlineSVG src={searchIcon} width={20} />
         </Button>
         <Upload>
           <Button>
-            <InlineSVG src={uploadSVG} width={20} />
+            <InlineSVG src={uploadIcon} width={20} />
             <span>הוסף הדרכה</span>
           </Button>
         </Upload>

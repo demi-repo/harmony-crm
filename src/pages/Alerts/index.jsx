@@ -1,13 +1,16 @@
-import planSVG from "../../assets/icons/calendar.svg";
+import { useState } from "react";
 import { Button, Tabs, DatePicker } from "antd";
 import InlineSVG from "react-inlinesvg";
-import Table from "../../components/table/Table";
-import Select from "../../components/select/Select";
-import AvatarImg1 from "../../assets/images/avatar1.png";
-import AvatarImg2 from "../../assets/images/avatar2.png";
-import { useState } from "react";
+
+import calendarIcon from "../../assets/icons/master/calendar.svg";
+
+import Table from "../../components/Table";
+import Select from "../../components/Select";
+import AvatarImg1 from "../../assets/avatars/avatar1.png";
+import AvatarImg2 from "../../assets/avatars/avatar2.png";
 
 const { RangePicker } = DatePicker;
+
 const columns = [
   {
     title: "תאריך",
@@ -97,7 +100,7 @@ const Alerts = () => {
               setOpen(!open);
             }}
           >
-            <InlineSVG src={planSVG} width={20} />
+            <InlineSVG src={calendarIcon} width={20} />
             <span>טווח תאריכים</span>
           </Button>
         )}

@@ -1,11 +1,11 @@
 import { useState } from "react";
-
 import InlineSVG from "react-inlinesvg";
-import paperClipSvg from "../../../assets/icons/paperclip.svg";
-import moreSvg from "../../../assets/icons/more.svg";
 
-import QuickMenu from "../../quickMenu/QuickMenu";
-import TimeLabel from "../../labels/timeLabel/TimeLabel";
+import paperclipIcon from "../../../assets/icons/master/paperclip.svg";
+import moreIcon from "../../../assets/icons/master/more.svg";
+
+import QuickMenu from "../../QuickMenu";
+import TimeLabel from "../../Labels/TimeLabel";
 
 const SmallCard = ({ title, content, labelColor }) => {
   const [visible, setVisible] = useState(false);
@@ -20,7 +20,7 @@ const SmallCard = ({ title, content, labelColor }) => {
       <div className="small-card-footer">
         <div className="small-card-footer-attach">
           <span>3</span>
-          <InlineSVG src={paperClipSvg} style={{ stroke: "#5177A4" }} />
+          <InlineSVG src={paperclipIcon} style={{ stroke: "#5177A4" }} />
         </div>
         <div className="small-card-footer-info">
           <span className="card-number-text">כרטיס:</span>
@@ -29,7 +29,7 @@ const SmallCard = ({ title, content, labelColor }) => {
         <TimeLabel content="24 במאי" color={labelColor || "#EA4335"} />
       </div>
       <div className="small-card-more" onClick={() => setVisible(true)}>
-        <InlineSVG src={moreSvg} style={{ stroke: "#B6C3C5" }} />
+        <InlineSVG src={moreIcon} style={{ stroke: "#B6C3C5" }} />
       </div>
       <QuickMenu visible={visible} hide={() => setVisible(false)} />
     </div>

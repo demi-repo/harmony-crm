@@ -1,14 +1,16 @@
-import { Calendar, momentLocalizer } from "react-big-calendar";
-import moment from "moment";
-import { Button, Segmented, ConfigProvider, DatePicker } from "antd";
-import InlineSVG from "react-inlinesvg";
-import planSVG from "../../assets/icons/plan.svg";
-import createSVG from "../../assets/icons/addevent.svg";
-import nextSVG from "../../assets/icons/next.svg";
-import previousSVG from "../../assets/icons/previous.svg";
 import { useState } from "react";
-import CreateModal from "./createModal/CreateModal";
+import moment from "moment";
+import InlineSVG from "react-inlinesvg";
 import { useSelector } from "react-redux";
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import { Button, Segmented, ConfigProvider, DatePicker } from "antd";
+
+import calendarIcon from "../../assets/icons/master/calendar.svg";
+import calendarPlusIcon from "../../assets/icons/master/calendar-plus.svg";
+import rightIcon from "../../assets/icons/chevrons/right.svg";
+import leftIcon from "../../assets/icons/chevrons/left.svg";
+import CreateModal from "../../components/Modals/CreateDailyPlanner";
+
 const { RangePicker } = DatePicker;
 
 const customDayHeaderFormat = (date, culture, localizer) => {
@@ -27,8 +29,8 @@ const CustomToolbar = ({ setShowCreateModal }) => {
           className="daily-planner-navbar-others-current"
         >
           <div>
-            <InlineSVG src={nextSVG} width={20} />
-            <InlineSVG src={previousSVG} width={20} />
+            <InlineSVG src={rightIcon} width={20} />
+            <InlineSVG src={leftIcon} width={20} />
           </div>
           <span>נובמבר 2023</span>
         </Button>
@@ -46,7 +48,7 @@ const CustomToolbar = ({ setShowCreateModal }) => {
                 setOpen(!open);
               }}
             >
-              <InlineSVG src={planSVG} width={20} />
+              <InlineSVG src={calendarIcon} width={20} />
               <span>טווח תאריכים</span>
             </Button>
           )}
@@ -54,7 +56,7 @@ const CustomToolbar = ({ setShowCreateModal }) => {
         </div>
       </div>
       <Button onClick={() => setShowCreateModal(true)}>
-        <InlineSVG src={createSVG} width={20} />
+        <InlineSVG src={calendarPlusIcon} width={20} />
         <span>צור פגישה</span>
       </Button>
     </div>

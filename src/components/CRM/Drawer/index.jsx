@@ -1,16 +1,18 @@
 import { Drawer } from "antd";
-import Button from "../../../components/button/Button";
-import Table from "../../../components/table/Table";
-import editSVG from "../../../assets/icons/pencil.svg";
-import createSVG from "../../../assets/icons/create2.svg";
 import { useSelector } from "react-redux";
+
+import Button from "../../../components/Button";
+import Table from "../../../components/Table";
+
+import editIcon from "../../../assets/icons/master/edit.svg";
+import filePlusIcon from "../../../assets/icons/master/file-plus.svg";
 
 const items = [
   {
     title: "פרטים אישיים",
     button: {
       text: "עריכה",
-      icon: editSVG,
+      icon: editIcon,
     },
     columns: [
       {
@@ -60,7 +62,7 @@ const items = [
     title: "פרטי תוכנית",
     button: {
       text: "עריכה",
-      icon: editSVG,
+      icon: editIcon,
     },
     columns: [
       {
@@ -81,7 +83,7 @@ const items = [
     title: "מקור פנייה",
     button: {
       text: "עריכה",
-      icon: editSVG,
+      icon: editIcon,
     },
     columns: [
       {
@@ -141,7 +143,7 @@ const secondItem = {
   title: "אנשי קשר נוספים",
   button: {
     text: "רשומה חדשה",
-    icon: createSVG,
+    icon: filePlusIcon,
   },
   columns: [
     {

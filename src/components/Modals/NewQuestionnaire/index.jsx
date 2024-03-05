@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
-import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../../../../../assets/icons/master/close.svg";
-import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
-import questionSVG from "../../../../../../../assets/icons/question.svg";
-import Button from "../../../../../../../components/button/Button";
-import Item from "../../../../../../../components/profiles/basic/item/Item";
 import { useSelector } from "react-redux";
+import { motion, AnimatePresence } from "framer-motion";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import fileIcon from "../../../assets/icons/master/file.svg";
+import ModalTitle from "../../Labels/ModalTitle";
+import Button from "../../Button";
+import Item from "../../Recipient/Profile/Basic/Item";
 
 ReactModal.setAppElement("#root");
 
@@ -71,7 +72,7 @@ const NewQuestionnaire = ({ visible, onCancel }) => {
                 <InlineSVG src={closeIcon} />
               </button>
               <div className="recipient-questionnaire-modal">
-                <ModalTitle icon={questionSVG} title="הוספת שאלון" />
+                <ModalTitle icon={fileIcon} title="הוספת שאלון" />
                 <div
                   style={{
                     display: "flex",

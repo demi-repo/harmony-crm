@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Button } from "antd";
 import InlineSVG from "react-inlinesvg";
-import createSVG from "../../../../assets/icons/create2.svg";
-import Table from "../../../../components/table/Table";
-import editSVG from "../../../../assets/icons/pencil.svg";
-import trashSVG from "../../../../assets/icons/trash.svg";
-import checkSVG from "../../../../assets/icons/master/check.svg";
-import Modal from "../../../../components/modals/basic/Basic";
-import studySVG from "../../../../assets/icons/study.svg";
-import Item from "../../../../components/profiles/basic/item/Item";
-import CheckBox from "../../../../components/checkBox/CheckBox";
+
+import filePlusIcon from "../../../assets/icons/master/file-plus.svg";
+import Table from "../../../components/Table";
+import Modal from "../../../components/Modals/Basic";
+import Item from "../Profile/Basic/Item";
+import CheckBox from "../../../components/CheckBox";
+
+import editIcon from "../../../assets/icons/master/edit.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import checkIcon from "../../../assets/icons/master/check.svg";
+import educationIcon from "../../../assets/icons/master/education.svg";
 
 const data = [
   {
@@ -67,7 +69,7 @@ const columns = [
     render: (data) =>
       data && (
         <InlineSVG
-          src={checkSVG}
+          src={checkIcon}
           style={{
             stroke: "#9BD661",
             width: "100%",
@@ -105,8 +107,8 @@ const columns = [
           alignItems: "center",
         }}
       >
-        <InlineSVG src={editSVG} width={20} />
-        <InlineSVG src={trashSVG} width={20} />
+        <InlineSVG src={editIcon} width={20} />
+        <InlineSVG src={trashIcon} width={20} />
       </div>
     ),
   },
@@ -120,7 +122,7 @@ const Stuides = () => {
       <div className="recipient-studies-navbar">
         <span className="recipient-studies-navbar-title"></span>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={createSVG} width={20} />
+          <InlineSVG src={filePlusIcon} width={20} />
           <span>הוספת רשומה</span>
         </Button>
       </div>
@@ -130,7 +132,7 @@ const Stuides = () => {
       <Modal
         visible={showModal}
         onCancel={() => setShowModal(false)}
-        icon={studySVG}
+        icon={educationIcon}
         title="רשומת לימודים חדשה"
         flag={false}
         content={

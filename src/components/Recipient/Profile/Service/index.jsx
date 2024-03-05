@@ -1,7 +1,8 @@
-import Basic from "../basic/Basic";
-import userSVG from "../../../assets/icons/user.svg";
-import Item from "../basic/item/Item";
 import { useState } from "react";
+
+import Basic from "../Basic";
+import userIcon from "../../../../assets/icons/master/user.svg";
+import Item from "../Basic/Item";
 
 const Service = ({ selected }) => {
   const [currentChildrenNumbers, setCurrentChildrenNumbers] = useState(-1);
@@ -52,7 +53,7 @@ const Service = ({ selected }) => {
   return (
     <Basic
       title="פרטי מקבל שירות"
-      icon={userSVG}
+      icon={userIcon}
       selected={selected}
       content={
         <>

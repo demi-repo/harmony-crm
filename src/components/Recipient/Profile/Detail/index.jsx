@@ -1,9 +1,11 @@
-import Basic from "../basic/Basic";
-import detailSVG from "../../../assets/icons/detail.svg";
-import Item from "../basic/item/Item";
-import CheckBox from "../../checkBox/CheckBox";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+
+import puzzleIcon from "../../../../assets/icons/master/puzzle.svg";
+
+import Basic from "../Basic";
+import Item from "../Basic/Item";
+import CheckBox from "../../../CheckBox";
 
 const Detail = ({ selected }) => {
   const [checked1, setChecked1] = useState(false);
@@ -28,7 +30,7 @@ const Detail = ({ selected }) => {
   return (
     <Basic
       title="פרטים נוספים"
-      icon={detailSVG}
+      icon={puzzleIcon}
       selected={selected}
       content={
         <>

@@ -1,17 +1,18 @@
-import Service from "../../../../components/profiles/service/Service";
-import Address from "../../../../components/profiles/address/Address";
-import Contacts from "../../../../components/profiles/contacts/Contacts";
-import Education from "../../../../components/profiles/education/Education";
-import Working from "../../../../components/profiles/working/Working";
-import Plan from "../../../../components/profiles/plan/Plan";
-import Detail from "../../../../components/profiles/detail/Detail";
-import SideBar from "./sidebar/Sidebar";
 import { useEffect, useState } from "react";
-import createSVG from "../../../../assets/icons/master/user-plus.svg";
-import closeSVG from "../../../../assets/icons/master/close.svg";
 import { Button } from "antd";
 import InlineSVG from "react-inlinesvg";
-import useViewportWidth from "../../../../hooks/useViewportWidth";
+
+import Service from "./Service";
+import Address from "./Address";
+import Contacts from "./Contacts";
+import Education from "./Education";
+import Working from "./Working";
+import Plan from "./Plan";
+import Detail from "./Detail";
+import SideBar from "./SideBar";
+import userPlusIcon from "../../../assets/icons/master/user-plus.svg";
+import closeIcon from "../../../assets/icons/master/close.svg";
+import useViewportWidth from "../../../hooks/useViewportWidth";
 
 const Profile = () => {
   useEffect(() => {
@@ -76,11 +77,11 @@ const Profile = () => {
       </div>
       <div className="recipient-profile-footer">
         <Button>
-          <InlineSVG src={createSVG} />
+          <InlineSVG src={userPlusIcon} />
           <span>שמירה</span>
         </Button>
         <Button>
-          <InlineSVG src={closeSVG} />
+          <InlineSVG src={closeIcon} />
           <span>ביטול</span>
         </Button>
       </div>

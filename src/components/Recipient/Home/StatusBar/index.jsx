@@ -1,7 +1,7 @@
 import InlineSVG from "react-inlinesvg";
-// import avatarImg from "../../../../../assets/images/avatar3.png";
-import downSVG from "../../../../../assets/icons/chevrons/down.svg";
 import { useState } from "react";
+
+import downSVG from "../../../../assets/icons/chevrons/down.svg";
 
 const StatusBar = () => {
   const [visible1, setVisible1] = useState(false);

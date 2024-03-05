@@ -1,16 +1,17 @@
 import { Button } from "antd";
 import { useState } from "react";
 import InlineSVG from "react-inlinesvg";
-import AddTask from "../../components/modals/addTask/AddTask";
-import MediumCard from "../../components/taskCards/mediumCard/MediumCard";
 
-import createSvg from "../../assets/icons/create.svg";
-import avatarImg1 from "../../assets/images/avatar1.png";
-import avatarImg2 from "../../assets/images/avatar2.png";
-import avatarImg3 from "../../assets/images/avatar3.png";
-import avatarImg4 from "../../assets/images/avatar4.png";
-import avatarImg5 from "../../assets/images/avatar5.png";
-import addImg from "../../assets/icons/add.svg";
+import AddTask from "../../components/Modals/AddTask";
+import MediumCard from "../../components/TaskCards/MediumCard";
+
+import createIcon from "../../assets/icons/master/create.svg";
+import avatarImg1 from "../../assets/avatars/avatar1.png";
+import avatarImg2 from "../../assets/avatars/avatar2.png";
+import avatarImg3 from "../../assets/avatars/avatar3.png";
+import avatarImg4 from "../../assets/avatars/avatar4.png";
+import avatarImg5 from "../../assets/avatars/avatar5.png";
+import addIcon from "../../assets/icons/add.svg";
 
 const items = [
   {
@@ -116,7 +117,7 @@ const MainTask = () => {
               style={{ paddingRight: "10px" }}
             >
               <button onClick={() => setVisible(true)}>
-                <InlineSVG src={addImg} />
+                <InlineSVG src={addIcon} />
               </button>
               <div>משימה חדשה</div>
             </div>
@@ -130,7 +131,7 @@ const MainTask = () => {
             onClick={() => setVisible(true)}
           >
             <InlineSVG
-              src={createSvg}
+              src={createIcon}
               style={{ stroke: "#434F68", width: "16px", height: "20px" }}
             />
             <span>הוסף רשימה</span>

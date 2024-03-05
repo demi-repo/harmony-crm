@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../../../../../assets/icons/master/close.svg";
-import ModalTitle from "../../../../../../../components/labels/modalTitle/ModalTitle";
-import recoverySVG from "../../../../../../../assets/icons/recovery.svg";
-import Table from "../../../../../../../components/table/Table";
 import { useSelector } from "react-redux";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import historyIcon from "../../../assets/icons/master/history.svg";
+
+import ModalTitle from "../../Labels/ModalTitle";
+import Table from "../../Table";
+
 ReactModal.setAppElement("#root");
 
 const modalVariants = {
@@ -98,7 +101,7 @@ const EventHistory = ({ visible, onCancel }) => {
                 <InlineSVG src={closeIcon} />
               </button>
               <div>
-                <ModalTitle icon={recoverySVG} title="היסטורית אירועים" />
+                <ModalTitle icon={historyIcon} title="היסטורית אירועים" />
                 <div style={{ marginTop: "10px" }}>
                   <Table columns={columns} data={data} />
                 </div>

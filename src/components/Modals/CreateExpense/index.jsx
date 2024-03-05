@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
-import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../../assets/icons/master/close.svg";
-import uploadSVG from "../../../../assets/icons/uploadDoc.svg";
-import Button from "../../../../components/button/Button";
-import Item from "../../../../components/profiles/basic/item/Item";
-import reportSVG from "../../../../assets/icons/master/create.svg";
-import ModalTitle from "../../../../components/labels/modalTitle/ModalTitle";
 import ReactSelect from "react-select";
-import userSVG from "../../../../assets/icons/user.svg";
-import addUserSVG from "../../../../assets/icons/master/user-plus.svg";
+import { motion, AnimatePresence } from "framer-motion";
 import { Segmented, Upload, ConfigProvider } from "antd";
 import { useSelector } from "react-redux";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import uploadFileIcon from "../../../assets/icons/master/upload-file.svg";
+import createIcon from "../../../assets/icons/master/create.svg";
+import userIcon from "../../../assets/icons/master/user.svg";
+import userPlusIcon from "../../../assets/icons/master/user-plus.svg";
+
+import Item from "../../Recipient/Profile/Basic/Item";
+import ModalTitle from "../../Labels/ModalTitle";
+import Button from "../../Button";
 
 ReactModal.setAppElement("#root");
 
@@ -79,7 +81,7 @@ const Expense = ({ visible, onCancel }) => {
                 <InlineSVG src={closeIcon} />
               </button>
               <div className="recipient-daily-planner-create">
-                <ModalTitle title="טופס דיווח נוכחות" icon={reportSVG} />
+                <ModalTitle title="טופס דיווח נוכחות" icon={createIcon} />
                 <div
                   style={{
                     display: "flex",
@@ -160,7 +162,7 @@ const Expense = ({ visible, onCancel }) => {
                         onMouseLeave={() => setHover(false)}
                       />
                       <InlineSVG
-                        src={userSVG}
+                        src={userIcon}
                         className="select-svg"
                         style={{
                           stroke: isHover && "#0075FF",
@@ -191,7 +193,7 @@ const Expense = ({ visible, onCancel }) => {
                     >
                       <div className="profiles-item-name">חשבוניות</div>
                       <Upload className="expense-modal-upload">
-                        <Button label="העלאת מסמכים" icon={uploadSVG} />
+                        <Button label="העלאת מסמכים" icon={uploadFileIcon} />
                       </Upload>
                     </div>
                   </div>
@@ -201,7 +203,7 @@ const Expense = ({ visible, onCancel }) => {
                   className="basic-modal-footer"
                   style={{ marginTop: "20px" }}
                 >
-                  <Button onClick={onCancel} label="שמירה" icon={addUserSVG} />
+                  <Button onClick={onCancel} label="שמירה" icon={userPlusIcon} />
                   <Button onClick={onCancel} icon={closeIcon} label="ביטול" />
                 </div>
               </div>

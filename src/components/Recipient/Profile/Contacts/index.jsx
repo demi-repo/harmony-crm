@@ -1,9 +1,11 @@
-import Basic from "../basic/Basic";
 import { Button } from "antd";
-import usersSVG from "../../../assets/icons/master/users.svg";
-import addImg from "../../../assets/icons/add.svg";
-import Item from "../basic/item/Item";
 import InlineSVG from "react-inlinesvg";
+
+import usersSVG from "../../../../assets/icons/master/users.svg";
+import addImg from "../../../../assets/icons/add.svg";
+
+import Basic from "../Basic";
+import Item from "../Basic/Item";
 
 const Contacts = ({ selected }) => {
   return (

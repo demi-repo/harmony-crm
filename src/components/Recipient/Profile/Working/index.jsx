@@ -1,15 +1,15 @@
-import Basic from "../basic/Basic";
-import jobSVG from "../../../assets/icons/master/bag.svg";
-import CheckBox from "../../checkBox/CheckBox";
-import Item from "../basic/item/Item";
 import { useState } from "react";
+
+import Basic from "../Basic";
+import bagIcon from "../../../../assets/icons/master/bag.svg";
+import CheckBox from "../../../CheckBox";
 
 const Working = ({ selected }) => {
   const [checked, setChecked] = useState(false);
   return (
     <Basic
       title="עבודה"
-      icon={jobSVG}
+      icon={bagIcon}
       selected={selected}
       content={
         <>

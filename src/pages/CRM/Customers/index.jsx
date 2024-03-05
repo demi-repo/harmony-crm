@@ -1,10 +1,11 @@
-import InlineSVG from "react-inlinesvg";
-import { Table, Button, ConfigProvider } from "antd";
-import reportSVG from "../../../assets/icons/create.svg";
 import { useState } from "react";
-import NewRecordModal from "../newRecord/NewRecord";
-import Drawer from "../drawer/Drawer";
+import InlineSVG from "react-inlinesvg";
 import { useSelector } from "react-redux";
+import { Table, Button, ConfigProvider } from "antd";
+
+import createIcon from "../../../assets/icons/master/create.svg";
+import NewRecordModal from "../../../components/CRM/NewRecord";
+import Drawer from "../../../components/CRM/Drawer";
 
 const columns = [
   {
@@ -193,7 +194,7 @@ const Customers = () => {
       <div className="customers-navbar">
         <span className="customers-navbar-title">לקוחות פוטנציאליים</span>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={reportSVG} width={20} />
+          <InlineSVG src={createIcon} width={20} />
           <span>הוספת רשומה</span>
         </Button>
       </div>

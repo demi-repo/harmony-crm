@@ -1,10 +1,11 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Button, Table, ConfigProvider } from "antd";
 import InlineSVG from "react-inlinesvg";
-import reportSVG from "../../../assets/icons/create.svg";
-import NewRecordModal from "../newRecord/NewRecord";
-import { useState } from "react";
-import Drawer from "../drawer/Drawer";
-import { useSelector } from "react-redux";
+
+import createIcon from "../../../assets/icons/master/create.svg";
+import NewRecordModal from "../../../components/CRM/NewRecord";
+import Drawer from "../../../components/CRM/Drawer";
 
 const columns = [
   {
@@ -202,7 +203,7 @@ const ServiceApplicants = () => {
           מבקשי שירות פוטנציאליים
         </span>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={reportSVG} width={20} />
+          <InlineSVG src={createIcon} width={20} />
           <span>הוספת רשומה</span>
         </Button>
       </div>

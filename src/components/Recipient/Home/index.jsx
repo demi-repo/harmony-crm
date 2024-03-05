@@ -1,6 +1,6 @@
-import Board from "./board/Board";
-import CardList from "./cardList/CardList";
-import StatusBar from "./statusBar/StatusBar";
+import Board from "./Board";
+import CardList from "./CardList";
+import StatusBar from "./StatusBar";
 
 const Home = () => {
   return (

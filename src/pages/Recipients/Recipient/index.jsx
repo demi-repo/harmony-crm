@@ -2,27 +2,28 @@ import React, { useState } from "react";
 import { ConfigProvider, Tabs } from "antd";
 import { useSelector } from "react-redux";
 import InlineSVG from "react-inlinesvg";
-import homeSVG from "../../../assets/icons/home.svg";
-import profileSVG from "../../../assets/icons/profile.svg";
-import medicalSVG from "../../../assets/icons/medical.svg";
-import attachSVG from "../../../assets/icons/master/attachment.svg";
-import eventsSVG from "../../../assets/icons/events.svg";
-import planSVG from "../../../assets/icons/calendar.svg";
-import taskSVG from "../../../assets/icons/clipboard-master/check.svg";
-import studySVG from "../../../assets/icons/study.svg";
-import jobSVG from "../../../assets/icons/master/bag.svg";
-import questionSVG from "../../../assets/icons/question.svg";
 
-import Home from "./home/Home";
-import Profile from "./profile/Profile";
-import Medical from "./medical/Medical";
-import Documents from "./documents/Documents";
-import Events from "./events/Events";
-import DailyPlanner from "./dailyPlanner/DailyPlanner";
-import Tasks from "./tasks/Tasks";
-import Studies from "./studies/Studies";
-import Employment from "./employment/Employment";
-import Questionnaires from "./questionnaires";
+import homeIcon from "../../../assets/icons/master/home.svg";
+import passportIcon from "../../../assets/icons/master/passport.svg";
+import medicalIcon from "../../../assets/icons/master/medical.svg";
+import attachmentIcon from "../../../assets/icons/master/attachment.svg";
+import dateIcon from "../../../assets/icons/master/date.svg";
+import calendarIcon from "../../../assets/icons/master/calendar.svg";
+import clipboardCheckIcon from "../../../assets/icons/master/clipboard-check.svg";
+import educationIcon from "../../../assets/icons/master/education.svg";
+import bagIcon from "../../../assets/icons/master/bag.svg";
+import fileIcon from "../../../assets/icons/master/file.svg";
+
+import Home from "../../../components/Recipient/Home";
+import Profile from "../../../components/Recipient/Profile";
+import Medical from "../../../components/Recipient/Medical";
+import Documents from "../../../components/Recipient/Documents";
+import Events from "../../../components/Recipient/Events";
+import DailyPlanner from "../../../components/Recipient/DailyPlanner";
+import Tasks from "../../../components/Recipient/Tasks";
+import Studies from "../../../components/Recipient/Studies";
+import Employment from "../../../components/Recipient/Employment";
+import Questionnaires from "../../../components/Recipient/Questionnaire";
 
 const Recipient = () => {
   const [activeKey, setActiveKey] = useState("1");
@@ -33,7 +34,7 @@ const Recipient = () => {
       children: <Home />,
       icon: (
         <InlineSVG
-          src={homeSVG}
+          src={homeIcon}
           width={20}
           style={activeKey === "1" ? { stroke: "#1677ff" } : {}}
         />
@@ -45,7 +46,7 @@ const Recipient = () => {
       children: <Profile />,
       icon: (
         <InlineSVG
-          src={profileSVG}
+          src={passportIcon}
           width={20}
           style={activeKey === "2" ? { stroke: "#1677ff" } : {}}
         />
@@ -57,7 +58,7 @@ const Recipient = () => {
       children: <Medical />,
       icon: (
         <InlineSVG
-          src={medicalSVG}
+          src={medicalIcon}
           width={20}
           style={activeKey === "3" ? { stroke: "#1677ff" } : {}}
         />
@@ -69,7 +70,7 @@ const Recipient = () => {
       children: <Documents />,
       icon: (
         <InlineSVG
-          src={attachSVG}
+          src={attachmentIcon}
           width={20}
           style={activeKey === "4" ? { stroke: "#1677ff" } : {}}
         />
@@ -81,7 +82,7 @@ const Recipient = () => {
       children: <Events />,
       icon: (
         <InlineSVG
-          src={eventsSVG}
+          src={dateIcon}
           width={20}
           style={activeKey === "5" ? { stroke: "#1677ff" } : {}}
         />
@@ -93,7 +94,7 @@ const Recipient = () => {
       children: <DailyPlanner />,
       icon: (
         <InlineSVG
-          src={planSVG}
+          src={calendarIcon}
           width={20}
           style={activeKey === "6" ? { stroke: "#1677ff" } : {}}
         />
@@ -105,7 +106,7 @@ const Recipient = () => {
       children: <Tasks />,
       icon: (
         <InlineSVG
-          src={taskSVG}
+          src={clipboardCheckIcon}
           width={20}
           style={activeKey === "7" ? { stroke: "#1677ff" } : {}}
         />
@@ -117,7 +118,7 @@ const Recipient = () => {
       children: <Studies />,
       icon: (
         <InlineSVG
-          src={studySVG}
+          src={educationIcon}
           width={20}
           style={activeKey === "8" ? { stroke: "#1677ff" } : {}}
         />
@@ -129,7 +130,7 @@ const Recipient = () => {
       children: <Employment />,
       icon: (
         <InlineSVG
-          src={jobSVG}
+          src={bagIcon}
           width={20}
           style={activeKey === "9" ? { stroke: "#1677ff" } : {}}
         />
@@ -141,7 +142,7 @@ const Recipient = () => {
       children: <Questionnaires />,
       icon: (
         <InlineSVG
-          src={questionSVG}
+          src={fileIcon}
           width={20}
           style={activeKey === "10" ? { stroke: "#1677ff" } : {}}
         />

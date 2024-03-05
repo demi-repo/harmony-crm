@@ -1,13 +1,15 @@
+import { useState } from "react";
 import { Button, Upload } from "antd";
 import InlineSVG from "react-inlinesvg";
-import uploadSVG from "../../../../assets/icons/uploadDoc.svg";
-import Table from "../../../../components/table/Table";
-import eyeSVG from "../../../../assets/icons/eye.svg";
-import downloadSVG from "../../../../assets/icons/download.svg";
-import trashSVG from "../../../../assets/icons/trash.svg";
-import ColorLabel from "../../../../components/labels/colorLabel/ColorLabel";
-import { useState } from "react";
-import Modal from "./modal/Modal";
+
+import uploadFileIcon from "../../../assets/icons/master/upload-file.svg";
+import viewIcon from "../../../assets/icons/master/view.svg";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+
+import Table from "../../Table";
+import ColorLabel from "../../Labels/ColorLabel";
+import Modal from "../../Modals/AddDocuments";
 
 const data = [
   {
@@ -86,9 +88,9 @@ const columns = [
           alignItems: "center",
         }}
       >
-        <InlineSVG src={eyeSVG} width={20} />
-        <InlineSVG src={downloadSVG} width={20} />
-        <InlineSVG src={trashSVG} width={20} />
+        <InlineSVG src={viewIcon} width={20} />
+        <InlineSVG src={downloadIcon} width={20} />
+        <InlineSVG src={trashIcon} width={20} />
       </div>
     ),
   },
@@ -102,7 +104,7 @@ const Documents = () => {
         <span className="recipient-documents-navbar-title"></span>
         <Upload>
           <Button>
-            <InlineSVG src={uploadSVG} width={20} />
+            <InlineSVG src={uploadFileIcon} width={20} />
             <span>העלאת מסמך</span>
           </Button>
         </Upload>

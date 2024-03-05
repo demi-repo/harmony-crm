@@ -184,7 +184,7 @@ const SideBar = ({ collapsed, setCollapsed }) => {
           isSelect={isSelected === 3}
           onClick={() => {
             setSelected(3);
-            navigate("/maintask");
+            navigate("/main-task");
           }}
           key={3}
         />

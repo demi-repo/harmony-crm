@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Button,
   ConfigProvider,
@@ -6,16 +7,18 @@ import {
   Tabs,
   DatePicker,
 } from "antd";
-import InlineSVG from "react-inlinesvg";
-import planSVG from "../../../../assets/icons/plan.svg";
-import Table from "../../../../components/table/Table";
-import addEventSVG from "../../../../assets/icons/addevent.svg";
-import searchSVG from "../../../../assets/icons/search.svg";
-import trashSVG from "../../../../assets/icons/trash.svg";
-import editSVG from "../../../../assets/icons/pencil.svg";
-import { useState } from "react";
-import CreateModal from "./createModal/CreateModal";
 import { useSelector } from "react-redux";
+import InlineSVG from "react-inlinesvg";
+
+import calendarIcon from "../../../assets/icons/master/calendar.svg";
+import calendarPlusIcon from "../../../assets/icons/master/calendar-plus.svg";
+import searchIcon from "../../../assets/icons/system/search.svg";
+import trashIcon from "../../../assets/icons/master/trash.svg";
+import editIcon from "../../../assets/icons/master/edit.svg";
+
+import CreateModal from "../../Modals/CreateDailyPlanner";
+import Table from "../../Table";
+
 const { RangePicker } = DatePicker;
 
 const data = [
@@ -118,8 +121,8 @@ const columns = [
           alignItems: "center",
         }}
       >
-        <InlineSVG src={editSVG} width={20} />
-        <InlineSVG src={trashSVG} width={20} />
+        <InlineSVG src={editIcon} width={20} />
+        <InlineSVG src={trashIcon} width={20} />
       </div>
     ),
   },
@@ -135,7 +138,7 @@ const DailyPlanner = () => {
         <div>
           <Input
             placeholder="חיפוש..."
-            suffix={<InlineSVG src={searchSVG} />}
+            suffix={<InlineSVG src={searchIcon} />}
             style={{
               borderRadius: "30px",
               borderColor: "transparent",
@@ -154,14 +157,14 @@ const DailyPlanner = () => {
                 setOpen(!open);
               }}
             >
-              <InlineSVG src={planSVG} width={20} />
+              <InlineSVG src={calendarIcon} width={20} />
               <span>טווח תאריכים</span>
             </Button>
           )}
           {open && <RangePicker style={{ height: "44px" }} />}
         </div>
         <Button onClick={() => setShowModal(true)}>
-          <InlineSVG src={addEventSVG} width={20} />
+          <InlineSVG src={calendarPlusIcon} width={20} />
           <span>הוסף פגישה</span>
         </Button>
       </div>

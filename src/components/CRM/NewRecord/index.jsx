@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
 import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../assets/icons/master/close.svg";
-import Button from "../../../components/button/Button";
-import Item from "../../../components/profiles/basic/item/Item";
-import addUserIcon from "../../../assets/icons/master/user-plus.svg";
-import createSVG from "../../../assets/icons/create2.svg";
 import { useSelector } from "react-redux";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import addUserIcon from "../../../assets/icons/master/user-plus.svg";
+import filePlusIcon from "../../../assets/icons/master/file-plus.svg";
+
+import Item from "../../Recipient/Profile/Basic/Item";
+import Button from "../../Button";
 
 ReactModal.setAppElement("#root");
 
@@ -78,7 +80,7 @@ const CreateModal = ({ visible, onCancel }) => {
               <div>
                 <div className="modal-title">
                   <InlineSVG
-                    src={createSVG}
+                    src={filePlusIcon}
                     className="modal-title-svg"
                     style={{
                       stroke: "#FF8A00",

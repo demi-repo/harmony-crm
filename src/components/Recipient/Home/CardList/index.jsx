@@ -1,17 +1,16 @@
 import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 
-import MiniCard from "../../../../../components/taskCards/miniCard/MiniCard";
-import TitleLabel from "../../../../../components/labels/titleLabel/TitleLabel";
-import AddTask from "../../../../../components/modals/addTask/AddTask";
-import TaskCardData from "../../../../../mockup/TaskCard.json";
+import MiniCard from "../../../../components/TaskCards/MiniCard";
+import TitleLabel from "../../../../components/Labels/TitleLabel";
+import AddTask from "../../../../components/Modals/AddTask";
+import TaskCardData from "../../../../mockup/TaskCard.json";
 
-import listSVG from "../../../../../assets/icons/list.svg";
-import taskSVG from "../../../../../assets/icons/master/clipboard-master/check.svg";
-import addSVG from "../../../../../assets/icons/add.svg";
+import clipboardCheckIcon from "../../../../assets/icons/master/clipboard-check.svg";
+import addIcon from "../../../../assets/icons/add.svg";
 
-import avatarImg5 from "../../../../../assets/images/avatar5.png";
-import avatarImg6 from "../../../../../assets/images/avatar6.png";
+import avatarImg5 from "../../../../assets/avatars/avatar5.png";
+import avatarImg6 from "../../../../assets/avatars/avatar6.png";
 
 const TaskCardList = () => {
   const [isVisible, setVisible] = useState(false);
@@ -19,7 +18,7 @@ const TaskCardList = () => {
   return (
     <div className="card-list">
       <div className="card-list-title">
-        <TitleLabel icon={taskSVG} title="משימות" />
+        <TitleLabel icon={clipboardCheckIcon} title="משימות" />
       </div>
       <MiniCard
         avatar={avatarImg5}
@@ -55,7 +54,7 @@ const TaskCardList = () => {
       />
       <div className="card-list-buttons">
         <button onClick={() => setVisible(true)}>
-          <InlineSVG src={addSVG} />
+          <InlineSVG src={addIcon} />
         </button>
         <div>משימה חדשה</div>
       </div>

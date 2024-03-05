@@ -1,14 +1,15 @@
 import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
-import InlineSVG from "react-inlinesvg";
-import reportSVG from "../../../assets/icons/create.svg";
-import planSVG from "../../../assets/icons/calendar.svg";
-import downloadSVG from "../../../assets/icons/download.svg";
-import avatarImg1 from "../../../assets/images/avatar1.png";
-
-import Table from "../../../components/table/Table";
-import ExpenseModal from "../modals/expense/Expense";
-import { useState } from "react";
 import { useSelector } from "react-redux";
+import { useState } from "react";
+import InlineSVG from "react-inlinesvg";
+
+import createIcon from "../../../assets/icons/master/create.svg";
+import calendarIcon from "../../../assets/icons/master/calendar.svg";
+import downloadIcon from "../../../assets/icons/master/download.svg";
+import avatarImg1 from "../../../assets/avatars/avatar1.png";
+import Table from "../../../components/Table";
+import ExpenseModal from "../../../components/Modals/CreateExpense";
+
 const { RangePicker } = DatePicker;
 
 const columns = [
@@ -56,7 +57,7 @@ const columns = [
     sorter: true,
     width: "100px",
     render: () => (
-      <InlineSVG src={downloadSVG} style={{ margin: "auto", width: "100%" }} />
+      <InlineSVG src={downloadIcon} style={{ margin: "auto", width: "100%" }} />
     ),
   },
 ];
@@ -130,14 +131,14 @@ const Expense = () => {
                   setOpen(!open);
                 }}
               >
-                <InlineSVG src={planSVG} width={20} />
+                <InlineSVG src={calendarIcon} width={20} />
                 <span>טווח תאריכים</span>
               </Button>
             )}
             {open && <RangePicker style={{ height: "44px" }} />}
           </div>
           <Button onClick={() => setShowModal(true)}>
-            <InlineSVG src={reportSVG} width={20} />
+            <InlineSVG src={createIcon} width={20} />
             <span>דיווח חדש</span>
           </Button>
         </div>

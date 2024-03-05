@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import InlineSVG from "react-inlinesvg";
 import ReactModal from "react-modal";
-import { motion, AnimatePresence } from "framer-motion";
-import closeIcon from "../../../assets/icons/master/close.svg";
-import taskSVG from "../../../assets/icons/master/clipboard-master/check.svg";
-import Button from "../../../components/button/Button";
-import Item from "../../../components/profiles/basic/item/Item";
-import CheckBox from "../../../components/checkBox/CheckBox";
-import addImg from "../../../assets/icons/add.svg";
-import ReactSelect from "react-select";
-import userSVG from "../../../assets/icons/user.svg";
 import { useSelector } from "react-redux";
+import { motion, AnimatePresence } from "framer-motion";
+import ReactSelect from "react-select";
+
+import closeIcon from "../../../assets/icons/master/close.svg";
+import taskSVG from "../../../assets/icons/master/clipboard-check.svg";
+import addIcon from "../../../assets/icons/add.svg";
+import userIcon from "../../../assets/icons/master/user.svg";
+
+import Item from "../../Recipient/Profile/Basic/Item";
+import CheckBox from "../../CheckBox";
+import Button from "../../Button";
 
 ReactModal.setAppElement("#root");
 
@@ -137,7 +139,7 @@ const CreateModal = ({ visible, onCancel }) => {
                         onMouseLeave={() => setHover(false)}
                       />
                       <InlineSVG
-                        src={userSVG}
+                        src={userIcon}
                         className="select-svg"
                         style={{
                           stroke: isHover && "#0075FF",
@@ -276,7 +278,7 @@ const CreateModal = ({ visible, onCancel }) => {
                       }
                     >
                       <button>
-                        <InlineSVG src={addImg} />
+                        <InlineSVG src={addIcon} />
                       </button>
                       <div>משימה חדשה</div>
                     </div>

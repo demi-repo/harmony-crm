@@ -1,41 +1,42 @@
 import React from "react";
 import InlineSVG from "react-inlinesvg";
-import userSVG from "../../../../../assets/icons/user.svg";
-import geometricsSVG from "../../../../../assets/icons/geometrics.svg";
-import usersSVG from "../../../../../assets/icons/master/users.svg";
-import studySVG from "../../../../../assets/icons/study.svg";
-import jobSVG from "../../../../../assets/icons/master/bag.svg";
-import planSVG from "../../../../../assets/icons/plan2.svg";
-import detailSVG from "../../../../../assets/icons/detail.svg";
+
+import userIcon from "../../../../assets/icons/master/user.svg";
+import locationIcon from "../../../../assets/icons/master/location.svg";
+import usersIcon from "../../../../assets/icons/master/users.svg";
+import educationIcon from "../../../../assets/icons/master/education.svg";
+import bagIcon from "../../../../assets/icons/master/bag.svg";
+import routeIcon from "../../../../assets/icons/master/route.svg";
+import puzzleIcon from "../../../../assets/icons/master/puzzle.svg";
 
 const data = [
   {
     text: "פרטי מקבל שירות",
-    icon: userSVG,
+    icon: userIcon,
   },
   {
     text: "כתובת ופרטי התקשרות",
-    icon: geometricsSVG,
+    icon: locationIcon,
   },
   {
     text: "אנשי קשר",
-    icon: usersSVG,
+    icon: usersIcon,
   },
   {
     text: "השכלה",
-    icon: studySVG,
+    icon: educationIcon,
   },
   {
     text: "עבודה",
-    icon: jobSVG,
+    icon: bagIcon,
   },
   {
     text: "תוכניות",
-    icon: planSVG,
+    icon: routeIcon,
   },
   {
     text: "פרטים נוספים",
-    icon: detailSVG,
+    icon: puzzleIcon,
   },
 ];
 

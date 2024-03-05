@@ -1,12 +1,14 @@
 import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
 import InlineSVG from "react-inlinesvg";
-import pdfSvg from "../../../assets/icons/pdf.svg";
-import excelSvg from "../../../assets/icons/excel.svg";
-import Select from "../../../components/select/Select";
-import AvatarImg2 from "../../../assets/images/avatar2.png";
-import AvatarImg3 from "../../../assets/images/avatar3.png";
-import Table from "../../../components/table/Table";
 import { useSelector } from "react-redux";
+
+import pdfIcon from "../../assets/icons/document/pdf.svg";
+import excelIcon from "../../assets/icons/document/excel.svg";
+
+import Select from "../../components/Select";
+import AvatarImg2 from "../../assets/avatars/avatar2.png";
+import AvatarImg3 from "../../assets/avatars/avatar3.png";
+import Table from "../../components/Table";
 
 const { RangePicker } = DatePicker;
 
@@ -101,11 +103,11 @@ const EventReport = () => {
         </div>
         <div className="event-report-navbar-buttons">
           <Button>
-            <InlineSVG src={excelSvg} />
+            <InlineSVG src={excelIcon} />
             <span>הורדה ל-Excel</span>
           </Button>
           <Button>
-            <InlineSVG src={pdfSvg} />
+            <InlineSVG src={pdfIcon} />
             <span>הורדה ל-PDF</span>
           </Button>
         </div>

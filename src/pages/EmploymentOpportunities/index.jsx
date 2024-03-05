@@ -1,13 +1,15 @@
-import { Button, ConfigProvider, Segmented, InputNumber } from "antd";
-import InlineSVG from "react-inlinesvg";
-import reportSVG from "../../assets/icons/create.svg";
-import Dropdown from "../../components/dropdown/Dropdown";
-import Table from "../../components/table/Table";
-import Modal from "../../components/modals/basic/Basic";
-import Item from "../../components/profiles/basic/item/Item";
-import jobSVG from "../../assets/icons/master/bag.svg";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import InlineSVG from "react-inlinesvg";
+import { Button, ConfigProvider, Segmented, InputNumber } from "antd";
+
+import createIcon from "../../assets/icons/master/create.svg";
+import jobSVG from "../../assets/icons/master/bag.svg";
+
+import Dropdown from "../../components/Dropdown";
+import Table from "../../components/Table";
+import Modal from "../../components/Modals/Basic";
+import Item from "../../components/Recipient/Profile/Basic/Item";
 
 const columns = [
   {
@@ -123,7 +125,7 @@ const Opportunities = () => {
             className="opportunities-navbar-button"
             onClick={() => setShowModal(true)}
           >
-            <InlineSVG src={reportSVG} width={20} />
+            <InlineSVG src={createIcon} width={20} />
             <span>הוספת רשומה</span>
           </Button>
         </div>

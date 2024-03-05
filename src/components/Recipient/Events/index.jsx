@@ -1,10 +1,12 @@
-import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
-import InlineSVG from "react-inlinesvg";
-import planSVG from "../../../../assets/icons/plan.svg";
-import Table from "../../../../components/table/Table";
-import Select from "../../../../components/select/Select";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import InlineSVG from "react-inlinesvg";
+import { Button, ConfigProvider, Segmented, DatePicker } from "antd";
+
+import calendarIcon from "../../../assets/icons/master/calendar.svg";
+
+import Table from "../../../components/Table";
+import Select from "../../../components/Select";
 
 const { RangePicker } = DatePicker;
 
@@ -99,7 +101,7 @@ const Events = () => {
               setOpen(!open);
             }}
           >
-            <InlineSVG src={planSVG} width={20} />
+            <InlineSVG src={calendarIcon} width={20} />
             <span>טווח תאריכים</span>
           </Button>
         )}

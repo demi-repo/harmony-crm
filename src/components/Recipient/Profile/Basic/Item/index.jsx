@@ -1,10 +1,11 @@
-import PropTypes from "prop-types";
-import Input from "../../../input/Input";
-import Select from "../../../select/Select";
-import DatePicker from "../../../pickers/datePicker/DatePicker";
-import TimePicker from "../../../pickers/timePicker/TimePicker";
-import CheckBox from "../../../checkBox/CheckBox";
 import { useState } from "react";
+import PropTypes from "prop-types";
+
+import Input from "../../../../Input";
+import Select from "../../../../Select";
+import DatePicker from "../../../../Pickers/DatePicker";
+import TimePicker from "../../../../Pickers/TimePicker";
+import CheckBox from "../../../../CheckBox";
 
 const Item = ({
   type,

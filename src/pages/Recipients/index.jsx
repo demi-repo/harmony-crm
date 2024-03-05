@@ -1,17 +1,16 @@
 import React from "react";
-import InlineSVG from "react-inlinesvg";
 
-import Table from "../../../components/table/Table";
-import Info from "./info/Info";
-import ColorLabel from "../../../components/labels/colorLabel/ColorLabel";
+import Table from "../../components/Table";
+import Info from "../../components/Recipient/Info";
+import ColorLabel from "../../components/Labels/ColorLabel";
 
-import AvatarImg2 from "../../../assets/images/avatar2.png";
-import AvatarImg3 from "../../../assets/images/avatar3.png";
-import AvatarImg7 from "../../../assets/images/avatar7.png";
-import AvatarImg8 from "../../../assets/images/avatar8.png";
-import AvatarImg9 from "../../../assets/images/avatar9.png";
-import AvatarImg10 from "../../../assets/images/avatar10.png";
-import AvatarImg11 from "../../../assets/images/avatar11.png";
+import AvatarImg2 from "../../assets/avatars/avatar2.png";
+import AvatarImg3 from "../../assets/avatars/avatar3.png";
+import AvatarImg7 from "../../assets/avatars/avatar7.png";
+import AvatarImg8 from "../../assets/avatars/avatar8.png";
+import AvatarImg9 from "../../assets/avatars/avatar9.png";
+import AvatarImg10 from "../../assets/avatars/avatar10.png";
+import AvatarImg11 from "../../assets/avatars/avatar11.png";
 
 const columns = [
   {
